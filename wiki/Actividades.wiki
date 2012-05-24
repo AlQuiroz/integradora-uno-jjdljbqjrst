@@ -1,10 +1,12 @@
 =Lista de la actividades para la primera entrega=
+
+[https://docs.google.com/open?id=0B3oUmF9eh0MnQ2Q3ZVAxSlF6MlE Documento original]
+
 ==Terminados==
 1.- Descripción de la problemática.<br>
 2.- Propósito del proyecto.<br>
 3.- Alcance. <br>
-4.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)<br>
-5.- Requerimientos del proyecto a ser solicitados a proveedores y los tiempos y formas en que estos deben ser entregados.<br>
+4.- Requerimientos del proyecto a ser solicitados a proveedores y los tiempos y formas en que estos deben ser entregados.<br>
 
 =Lista de actividades que faltan de realizar =
 *Actividades que tenemos que realizar en conjunto todos los miembros del equipo *
@@ -15,6 +17,7 @@
 4- Análisis cualitativo de los riesgos.<br>
 5- Plan de respuesta del problema que se presente (plan de respuesta a riesgos).<br>
 6- Documentación técnica del proyecto.<br>
+7.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)<br>
 
 
 ==Jared==
