@@ -1,15 +1,15 @@
 =Lista de la actividades para la primera entrega=
 ==Terminados==
-1.- Descripción de la problemática.
-2.- Propósito del proyecto.
-3.- Alcance. 
-4.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)
-5.- Requerimientos del proyecto a ser solicitados a proveedores y los tiempos y formas en que estos deben ser entregados.
+* 1.- Descripción de la problemática.
+* 2.- Propósito del proyecto.
+* 3.- Alcance. 
+* 4.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)
+* 5.- Requerimientos del proyecto a ser solicitados a proveedores y los tiempos y formas en que estos deben ser entregados.
 
 
 ==Todos==
-1- Estructura de descomposición del trabajo (EDT)(WBS)
-2- Posibles problemas que se pueden presentar en un proyecto de T.I. y el impacto que tendrán en el mismo.(Matriz de riesgos)
+* 1- Estructura de descomposición del trabajo (EDT)(WBS)
+* 2- Posibles problemas que se pueden presentar en un proyecto de T.I. y el impacto que tendrán en el mismo.(Matriz de riesgos)
 3- Aálisis cuantitativo de los riesgos.
 4- Análisis cualitativo de los riesgos.
 5- Plan de respuesta del problema que se presente (plan de respuesta a riesgos).
