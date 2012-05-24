@@ -1,38 +1,39 @@
 =Lista de la actividades para la primera entrega=
 ==Terminados==
-* 1.- Descripción de la problemática.
-* 2.- Propósito del proyecto.
-* 3.- Alcance. 
-* 4.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)
-* 5.- Requerimientos del proyecto a ser solicitados a proveedores y los tiempos y formas en que estos deben ser entregados.
+1.- Descripción de la problemática.<br>
+2.- Propósito del proyecto.<br>
+3.- Alcance. <br>
+4.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)<br>
+5.- Requerimientos del proyecto a ser solicitados a proveedores y los tiempos y formas en que estos deben ser entregados.<br>
 
-
+=Lista de actividades que faltan de realizar =
+*Actividades que tenemos que realizar en conjunto todos los miembros del equipo *
 ==Todos==
-* 1- Estructura de descomposición del trabajo (EDT)(WBS)
-* 2- Posibles problemas que se pueden presentar en un proyecto de T.I. y el impacto que tendrán en el mismo.(Matriz de riesgos)
-3- Aálisis cuantitativo de los riesgos.
-4- Análisis cualitativo de los riesgos.
-5- Plan de respuesta del problema que se presente (plan de respuesta a riesgos).
-6- Documentación técnica del proyecto.
+1- Estructura de descomposición del trabajo (EDT)(WBS)<br>
+2- Posibles problemas que se pueden presentar en un proyecto de T.I. y el impacto que tendrán en el mismo.(Matriz de riesgos)<br>
+3- Aálisis cuantitativo de los riesgos.<br>
+4- Análisis cualitativo de los riesgos.<br>
+5- Plan de respuesta del problema que se presente (plan de respuesta a riesgos).<br>
+6- Documentación técnica del proyecto.<br>
 
 
 ==Jared==
-1 Esquema del ciclo de vida.
-2 Justificación de las actividades del proceso.
-3 Script (plantilla, guion) del proceso de administración.
-4 Elementos clave para su planeación, monitoreo y control.
-*((Realizar Antes el WBS ))*
-5 Cronograma
-6 Diagrama de Gantt.
+1 Esquema del ciclo de vida.<br>
+2 Justificación de las actividades del proceso.<br>
+3 Script (plantilla, guion) del proceso de administración.<br>
+4 Elementos clave para su planeación, monitoreo y control.<br>
+*((Realizar Antes el WBS ))*<br>
+5 Cronograma. <br>
+6 Diagrama de Gantt. <br>
 ==Rodolfo==
-7 Diagrama de ruta crítica.
-8 Informe del presupuesto y evaluación de alternativas de inversión.
-9 Perfiles de  los participantes y del administrador.(Plan de RH)
-10 Matriz. de responsabilidades.(RAM)
-11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)
+7 Diagrama de ruta crítica. <br>
+8 Informe del presupuesto y evaluación de alternativas de inversión. <br>
+9 Perfiles de  los participantes y del administrador.(Plan de RH). <br>
+10 Matriz. de responsabilidades.(RAM) <br>
+11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)<br>
 ==José Juan==
-12 Información clave para cada actor involucrado. (stakeholders)
-13 Métodos de comunicación, justificación y formato. (Plan de comunicaciones)
-14 Propuestas de cotización y/o licitación.(adquisiciones)
-15 Protocolo de proyecto  (documento y presentación ejecutiva).
-16 Argumentar la viabilidad de la solución de T.I.
+12 Información clave para cada actor involucrado. (stakeholders)<br>
+13 Métodos de comunicación, justificación y formato. (Plan de comunicaciones)<br>
+14 Propuestas de cotización y/o licitación.(adquisiciones).<br>
+15 Protocolo de proyecto  (documento y presentación ejecutiva). <br>
+16 Argumentar la viabilidad de la solución de T.I. <br>
