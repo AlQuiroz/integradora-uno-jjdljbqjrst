@@ -16,7 +16,7 @@
 3- Aálisis cuantitativo de los riesgos.<br>
 4- Análisis cualitativo de los riesgos.<br>
 5- Plan de respuesta del problema que se presente (plan de respuesta a riesgos).<br>
-6- Documentación técnica del proyecto.<br>
+6- Documentación técnica del proyecto.(IEEE 1471)<br>
 7.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)<br>
 
 
