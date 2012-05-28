@@ -11,7 +11,7 @@
 =Lista de actividades que faltan de realizar =
 *Actividades que tenemos que realizar en conjunto todos los miembros del equipo *
 ==Todos==
-1- Estructura de descomposición del trabajo (EDT)(WBS)<br>
+1- Estructura de descomposición del trabajo (EDT)(WBS) YA <br> 
 2- Posibles problemas que se pueden presentar en un proyecto de T.I. y el impacto que tendrán en el mismo.(Matriz de riesgos)<br>
 3- Aálisis cuantitativo de los riesgos.<br>
 4- Análisis cualitativo de los riesgos.<br>
