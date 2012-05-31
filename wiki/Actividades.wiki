@@ -26,7 +26,7 @@
 3 Script (plantilla, guion) del proceso de administración.<br>
 4 Elementos clave para su planeación, monitoreo y control.<br>
 *((Realizar Antes el WBS ))*<br>
-5 Cronograma. <b>YA<b/><br>
+5 Cronograma. <b>YA</b><br>
 6 Diagrama de Gantt. <b>YA</b><br>
 ==Rodolfo==
 7 Diagrama de ruta crítica. <br>
