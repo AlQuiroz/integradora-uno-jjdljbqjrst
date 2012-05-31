@@ -27,12 +27,12 @@
 4 Elementos clave para su planeación, monitoreo y control.<br>
 *((Realizar Antes el WBS ))*<br>
 5 Cronograma. <b>YA<b><br>
-6 Diagrama de Gantt. <b>YA<b><br>
+6 Diagrama de Gantt. <b>YA</b><br>
 ==Rodolfo==
 7 Diagrama de ruta crítica. <br>
 8 Informe del presupuesto y evaluación de alternativas de inversión. <br>
 9 Perfiles de  los participantes y del administrador.(Plan de RH). <br>
-10 Matriz. de responsabilidades.(RAM)<b>YA<b> <br>
+10 Matriz. de responsabilidades.(RAM)<b>YA</b> <br>
 11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)<br>
 ==José Juan==
 12 Información clave para cada actor involucrado. (stakeholders)<br>
