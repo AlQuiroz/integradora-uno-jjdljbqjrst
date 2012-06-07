@@ -20,7 +20,8 @@ tiempos y formas en que estos deben ser entregados.<br>
 8 Informe del presupuesto y evaluación de alternativas de inversión. <br>
 11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)<br>
 1 Esquema del ciclo de vida.<br>
-
+6- Documentación técnica del proyecto.(IEEE 1471)<br>
+7.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)<br>
 
 =Lista de actividades que faltan de realizar =
 *Actividades que tenemos que realizar en conjunto todos los miembros del equipo *
@@ -32,8 +33,8 @@ tiempos y formas en que estos deben ser entregados.<br>
 3- Aálisis cuantitativo de los riesgos.<br>
 4- Análisis cualitativo de los riesgos.<br>
 5- Plan de respuesta del problema que se presente (plan de respuesta a riesgos).<br>
-6- Documentación técnica del proyecto.(IEEE 1471)<br>
-7.- Estándares de calidad aplicables al proyecto de T.I. (documentación y diseño)<br>
+
+
 
 
 ==Jared==
