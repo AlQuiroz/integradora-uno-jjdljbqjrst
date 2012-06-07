@@ -13,6 +13,9 @@ tiempos y formas en que estos deben ser entregados.<br>
 6 Diagrama de Gantt. <b>YA</b><br>
 10 Matriz. de responsabilidades.(RAM)<b>YA</b> <br>
 7 Diagrama de ruta crítica. <br>
+12 Información clave para cada actor involucrado. (stakeholders)<br>
+
+
 
 
 =Lista de actividades que faltan de realizar =
@@ -40,7 +43,7 @@ tiempos y formas en que estos deben ser entregados.<br>
 
 11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)<br>
 ==José Juan==
-12 Información clave para cada actor involucrado. (stakeholders)<br>
+
 13 Métodos de comunicación, justificación y formato. (Plan de comunicaciones)<br>
 14 Propuestas de cotización y/o licitación.(adquisiciones).<br>
 15 Protocolo de proyecto  (documento y presentación ejecutiva). <br>
