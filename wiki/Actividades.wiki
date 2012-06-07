@@ -19,11 +19,13 @@ tiempos y formas en que estos deben ser entregados.<br>
 14 Propuestas de cotización y/o licitación.(adquisiciones).<br>
 8 Informe del presupuesto y evaluación de alternativas de inversión. <br>
 11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)<br>
-
+1 Esquema del ciclo de vida.<br>
 
 
 =Lista de actividades que faltan de realizar =
 *Actividades que tenemos que realizar en conjunto todos los miembros del equipo *
+
+
 ==Todos==
 
 2- Posibles problemas que se pueden presentar en un proyecto de T.I. y el impacto que tendrán en el mismo.(Matriz de riesgos)<br>
@@ -35,7 +37,6 @@ tiempos y formas en que estos deben ser entregados.<br>
 
 
 ==Jared==
-1 Esquema del ciclo de vida.<br>
 2 Justificación de las actividades del proceso.<br>
 3 Script (plantilla, guion) del proceso de administración.<br>
 4 Elementos clave para su planeación, monitoreo y control.<br>
