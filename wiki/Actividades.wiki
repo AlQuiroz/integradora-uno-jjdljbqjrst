@@ -15,7 +15,7 @@ tiempos y formas en que estos deben ser entregados.<br>
 7 Diagrama de ruta crítica. <br>
 12 Información clave para cada actor involucrado. (stakeholders)<br>
 9 Perfiles de  los participantes y del administrador.(Plan de RH). <br>
-
+14 Propuestas de cotización y/o licitación.(adquisiciones).<br>
 
 
 =Lista de actividades que faltan de realizar =
@@ -45,6 +45,6 @@ tiempos y formas en que estos deben ser entregados.<br>
 ==José Juan==
 
 13 Métodos de comunicación, justificación y formato. (Plan de comunicaciones)<br>
-14 Propuestas de cotización y/o licitación.(adquisiciones).<br>
+
 15 Protocolo de proyecto  (documento y presentación ejecutiva). <br>
 16 Argumentar la viabilidad de la solución de T.I. <br>
