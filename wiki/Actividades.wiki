@@ -17,6 +17,9 @@ tiempos y formas en que estos deben ser entregados.<br>
 9 Perfiles de  los participantes y del administrador.(Plan de RH). <br>
 13 Métodos de comunicación, justificación y formato. (Plan de comunicaciones)<br>
 14 Propuestas de cotización y/o licitación.(adquisiciones).<br>
+8 Informe del presupuesto y evaluación de alternativas de inversión. <br>
+11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)<br>
+
 
 
 =Lista de actividades que faltan de realizar =
@@ -38,8 +41,7 @@ tiempos y formas en que estos deben ser entregados.<br>
 4 Elementos clave para su planeación, monitoreo y control.<br>
 
 ==Rodolfo==
-8 Informe del presupuesto y evaluación de alternativas de inversión. <br>
-11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)<br>
+
 
 ==José Juan==
 15 Protocolo de proyecto  (documento y presentación ejecutiva). <br>
