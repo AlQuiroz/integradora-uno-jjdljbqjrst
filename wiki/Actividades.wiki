@@ -14,7 +14,7 @@ tiempos y formas en que estos deben ser entregados.<br>
 10 Matriz. de responsabilidades.(RAM)<b>YA</b> <br>
 7 Diagrama de ruta crítica. <br>
 12 Información clave para cada actor involucrado. (stakeholders)<br>
-
+9 Perfiles de  los participantes y del administrador.(Plan de RH). <br>
 
 
 
@@ -39,7 +39,7 @@ tiempos y formas en que estos deben ser entregados.<br>
 
 ==Rodolfo==
 8 Informe del presupuesto y evaluación de alternativas de inversión. <br>
-9 Perfiles de  los participantes y del administrador.(Plan de RH). <br>
+
 
 11 Lista de factores clave de desempeño.( (reporte de Evaluación de performance)<br>
 ==José Juan==
