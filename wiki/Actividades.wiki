@@ -25,6 +25,7 @@ tiempos y formas en que estos deben ser entregados.<br>
 2- Posibles problemas que se pueden presentar en un proyecto de T.I. y el impacto que tendrán en el mismo.(Matriz de riesgos)<br>
 5- Plan de respuesta del problema que se presente (plan de respuesta a riesgos).<br>
 3- Aálisis cuantitativo de los riesgos.<br>
+4 Elementos clave para su planeación, monitoreo y control.<br>
 
 
 =Lista de actividades que faltan de realizar =
@@ -43,7 +44,6 @@ tiempos y formas en que estos deben ser entregados.<br>
 ==Jared==
 2 Justificación de las actividades del proceso.<br>
 3 Script (plantilla, guion) del proceso de administración.<br>
-4 Elementos clave para su planeación, monitoreo y control.<br>
 
 ==Rodolfo==
 
