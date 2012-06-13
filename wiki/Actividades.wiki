@@ -26,6 +26,7 @@ tiempos y formas en que estos deben ser entregados.<br>
 5- Plan de respuesta del problema que se presente (plan de respuesta a riesgos).<br>
 3- Aálisis cuantitativo de los riesgos.<br>
 4 Elementos clave para su planeación, monitoreo y control.<br>
+16 Argumentar la viabilidad de la solución de T.I. <br>
 
 
 =Lista de actividades que faltan de realizar =
@@ -49,4 +50,3 @@ tiempos y formas en que estos deben ser entregados.<br>
 
 
 ==José Juan==
-16 Argumentar la viabilidad de la solución de T.I. <br>
