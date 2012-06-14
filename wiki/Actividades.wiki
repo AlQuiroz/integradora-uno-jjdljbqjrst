@@ -27,26 +27,18 @@ tiempos y formas en que estos deben ser entregados.<br>
 3- Aálisis cuantitativo de los riesgos.<br>
 4 Elementos clave para su planeación, monitoreo y control.<br>
 16 Argumentar la viabilidad de la solución de T.I. <br>
-
+4- Análisis cualitativo de los riesgos.<br>
 
 =Lista de actividades que faltan de realizar =
 *Actividades que tenemos que realizar en conjunto todos los miembros del equipo *
 
-
 ==Todos==
 
-
-4- Análisis cualitativo de los riesgos.<br>
-
-
-
-
-
 ==Jared==
+
 2 Justificación de las actividades del proceso.<br>
 3 Script (plantilla, guion) del proceso de administración.<br>
 
 ==Rodolfo==
-
 
 ==José Juan==
