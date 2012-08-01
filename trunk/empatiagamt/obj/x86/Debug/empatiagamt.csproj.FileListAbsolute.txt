@@ -1,0 +1,14 @@
+C:\Users\camila\Desktop\empatiagamt\empatiagamt\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\camila\Desktop\empatiagamt\empatiagamt\obj\x86\Debug\empatiagamt.Properties.Resources.resources
+C:\Users\camila\Desktop\empatiagamt\empatiagamt\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\camila\Desktop\empatiagamt\empatiagamt\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\camila\Desktop\empatiagamt\empatiagamt\bin\Debug\empatiagamt.exe
+C:\Users\camila\Desktop\empatiagamt\empatiagamt\bin\Debug\empatiagamt.pdb
+C:\Users\camila\Desktop\empatiagamt\empatiagamt\obj\x86\Debug\empatiagamt.exe
+C:\Users\camila\Desktop\empatiagamt\empatiagamt\obj\x86\Debug\empatiagamt.pdb
+C:\Users\Santara\Documents\9noCuatrimestreMayo-Agosto\empatiagamt\empatiagamt\obj\x86\Debug\empatiagamt.exe
+C:\Users\Santara\Documents\9noCuatrimestreMayo-Agosto\empatiagamt\empatiagamt\obj\x86\Debug\empatiagamt.pdb
+C:\Users\Santara\Documents\9noCuatrimestreMayo-Agosto\empatiagamt\empatiagamt\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Santara\Documents\9noCuatrimestreMayo-Agosto\empatiagamt\empatiagamt\obj\x86\Debug\empatiagamt.Properties.Resources.resources
+C:\Users\Santara\Documents\9noCuatrimestreMayo-Agosto\empatiagamt\empatiagamt\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Santara\Documents\9noCuatrimestreMayo-Agosto\empatiagamt\empatiagamt\obj\x86\Debug\GenerateResource.write.1.tlog
