@@ -50,6 +50,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Academicos\default.aspx" />
+    <Content Include="Administrativo\default.aspx" />
+    <Content Include="default.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -59,7 +62,59 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Academicos\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Academicos\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Academicos\MasterPageGamp.Master.cs">
+      <DependentUpon>MasterPageGamp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Academicos\MasterPageGamp.Master.designer.cs">
+      <DependentUpon>MasterPageGamp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\MasterPageGamp.Master.cs">
+      <DependentUpon>MasterPageGamp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\MasterPageGamp.Master.designer.cs">
+      <DependentUpon>MasterPageGamp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPageGamp.Master.cs">
+      <DependentUpon>MasterPageGamp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPageGamp.Master.designer.cs">
+      <DependentUpon>MasterPageGamp.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPageGamp.Master" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Academicos\MasterPageGamp.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administrativo\MasterPageGamp.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
