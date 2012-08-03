@@ -89,21 +89,24 @@ namespace empatiagamt
             TelCasa = tcasa; Celular = tcel; Email = mail; RutaFoto = rutFoto;
         }
 
-
-        public override bool Agregar() { return false; }
-        public override bool Mostrar()
+        bool ICrud.Agregar()
         {
-            throw new System.NotImplementedException();
-}
-
-        public override bool Modificar()
-        {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public override bool Eliminar()
+        bool ICrud.Eliminar()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
+        }
+
+        bool ICrud.Modificar()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool ICrud.Mostrar()
+        {
+            throw new NotImplementedException();
         }
     }
 }

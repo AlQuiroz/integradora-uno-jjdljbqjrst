@@ -41,7 +41,7 @@ namespace empatiagamt
             Fecha = f; Altura = al; Peso = pes;
         }
 
-        public double CalcularIMC()
+        public double CalcularIMC2()
         {
             //IMC = peso / (altura) e2
             return peso / Math.Pow(2, Altura);

@@ -3,20 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head runat="server">
-<!--Funciones para forma JavaScrip -->
-<!--JavaScript-->
-<script src="Scripts/dialog/dialog_box.js" type="text/jscript" ></script>
-<script src="Scripts/messages/messages.js" type="text/jscript" ></script>
-<script src="Scripts/sorter/script.js" type="text/jscript" ></script>
-<script src="Scripts/sorter/packed.js" type="text/jscript" ></script>
-<script src="Scripts/tinyeditor/tiny.editor.js" type="text/jscript" ></script>
-<script src="Scripts/tinyeditor/tiny.editor.packed.js" type="text/jscript" ></script>
-<!--CSS -->
-<link rel="stylesheet" type="text/css" href="Scripts/dialog/dialog_box.css" />
-<link rel="stylesheet" type="text/css" href="Scripts/messages/messages.css" />
-<link rel="stylesheet" type="text/css" href="Scripts/sorter/stylesorter.css" />
-<link rel="stylesheet" type="text/css" href="Scripts/tinyeditor/tinyeditor.css" />
-<!--Funciones para forma JavaScrip-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />

@@ -40,24 +40,24 @@ namespace empatiagamt
             throw new System.NotImplementedException();
         }
 
-        public override bool Mostrar()
+        bool ICrud.Agregar()
         {
             throw new NotImplementedException();
         }
 
-        public override bool Agregar()
+        bool ICrud.Eliminar()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public override bool Eliminar()
+        bool ICrud.Modificar()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public override bool Modificar()
+        bool ICrud.Mostrar()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

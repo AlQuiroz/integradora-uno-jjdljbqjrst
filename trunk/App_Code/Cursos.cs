@@ -7,22 +7,23 @@ namespace empatiagamt
 {
     public class Cursos : Conexion, ICrud
     {
-        public override bool Agregar()
+
+        bool ICrud.Agregar()
         {
             throw new NotImplementedException();
         }
 
-        public override bool Eliminar()
+        bool ICrud.Eliminar()
         {
             throw new NotImplementedException();
         }
 
-        public override bool Modificar()
+        bool ICrud.Modificar()
         {
             throw new NotImplementedException();
         }
 
-        public override bool Mostrar()
+        bool ICrud.Mostrar()
         {
             throw new NotImplementedException();
         }

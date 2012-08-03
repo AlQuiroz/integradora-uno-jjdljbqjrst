@@ -55,30 +55,6 @@ namespace empatiagamt
             throw new System.NotImplementedException();
         }
 
-
-
-
-
-        public override bool Agregar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool Eliminar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool Modificar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool Mostrar()
-        {
-            throw new NotImplementedException();
-        }
-
         internal Participante Participante
         {
             get
@@ -88,6 +64,26 @@ namespace empatiagamt
             set
             {
             }
+        }
+
+        bool ICrud.Agregar()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool ICrud.Eliminar()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool ICrud.Modificar()
+        {
+            throw new NotImplementedException();
+        }
+
+        bool ICrud.Mostrar()
+        {
+            throw new NotImplementedException();
         }
     }
 }
