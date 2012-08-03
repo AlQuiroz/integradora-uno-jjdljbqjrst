@@ -5,32 +5,51 @@ using System.Text;
 
 namespace empatiagamt
 {
-    class Participante : Persona, ICrud
+    class Participante : Persona
     {
-    
-        public Participante()
+
+        private Parametros[] param;
+        public Participante(string id, string no, string ap, string am, string f, string ecivil, List<Parametros[]> tels, string mail, string rutFoto)
+            : base(id, no, ap, am, f, ecivil, tels, mail, rutFoto)
+        { }
+
+        public Participante() { }
+
+        public override bool Agregar()
         {
-            throw new System.NotImplementedException();
+            param = new Parametros[1];
+            param[0] = new Parametros("idparticipante", "0");
+            if (base.Agregar())
+            {
+                return EjecutarStore(param, "ParticipanteAltas");
+            }
+            return false;
         }
 
-        bool ICrud.Agregar()
+        public override bool Eliminar()
         {
-            throw new NotImplementedException();
+            param = new Parametros[1];
+            param[0] = new Parametros("pidparticipante", "" + Idpersona);
+            if (EjecutarStore(param, "ParticipanteBajas"))
+                return base.Eliminar();
+            return false;
         }
 
-        bool ICrud.Eliminar()
+        public override bool Modificar()
         {
-            throw new NotImplementedException();
+            return base.Modificar();
         }
 
-        bool ICrud.Modificar()
+        public override bool Mostrar()
         {
-            throw new NotImplementedException();
+            return LeerTabla("ParticipanteConsultar");
         }
 
-        bool ICrud.Mostrar()
+        public override bool BuscarPersona(string valor)
         {
-            throw new NotImplementedException();
+            param = new Parametros[1];
+            param[0] = new Parametros("valor", valor);
+            return LeerTabla("ParticpanteBusqueda", param);
         }
     }
 }

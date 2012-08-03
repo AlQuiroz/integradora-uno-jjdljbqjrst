@@ -5,7 +5,7 @@ using System.Text;
 
 namespace empatiagamt
 {
-    class Escuela : Conexion, ICrud
+    class Escuela :  ICrud
     {
         private string nombreEscuela;
 
@@ -66,22 +66,24 @@ namespace empatiagamt
             }
         }
 
-        bool ICrud.Agregar()
+
+
+        public override bool Agregar()
         {
             throw new NotImplementedException();
         }
 
-        bool ICrud.Eliminar()
+        public override bool Eliminar()
         {
             throw new NotImplementedException();
         }
 
-        bool ICrud.Modificar()
+        public override bool Modificar()
         {
             throw new NotImplementedException();
         }
 
-        bool ICrud.Mostrar()
+        public override bool Mostrar()
         {
             throw new NotImplementedException();
         }

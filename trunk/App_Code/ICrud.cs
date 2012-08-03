@@ -5,14 +5,14 @@ using System.Text;
 
 namespace empatiagamt
 {
-    public interface ICrud
+    public abstract class ICrud : Conexion
     {
-        bool Agregar();
+        public abstract bool Agregar();
 
-        bool Eliminar();
+        public abstract bool Eliminar();
 
-        bool Modificar();
+        public abstract bool Modificar();
 
-        bool Mostrar();
+        public abstract bool Mostrar();
     }
 }

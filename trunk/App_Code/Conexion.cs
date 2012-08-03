@@ -29,29 +29,111 @@ namespace empatiagamt
     
         public Conexion()
         {
-            cad = "";
+            cnn = new MySqlConnection("Server= localhost; Uid=root; pwd=123;database=empatiagamt");
         }
 
-        public bool Abrir()
+        private bool Abrir()
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                if (cnn.State == System.Data.ConnectionState.Closed)
+                {
+                    cnn.Open();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                return false;
+            }
         }
 
-        public bool Cerrar()
+        private bool Cerrar()
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                if (cnn.State == System.Data.ConnectionState.Open)
+                {
+                    cnn.Close();
+                }
+                return true;
+            }
+            catch { return false; }
         }
 
         public bool EjecutarStore(Parametros[] parametros, String store)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                this.Abrir();
+                cmd = new MySqlCommand();
+                cmd.Connection = cnn;
+                cmd.CommandText = store;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                for (int i = 0; i < parametros.Length; i++)
+                {
+                    cmd.Parameters.Add(parametros[i].NombreParametro, parametros[i].Valor);
+                }
+
+                cmd.ExecuteNonQuery();
+                this.Cerrar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                return false;
+            }
         }
 
-        public bool ConsultarStore()
+        public bool LeerTabla(string procedure)
         {
-            throw new System.NotImplementedException();
+            dTable = new DataTable();
+            try
+            {
+                this.Abrir();
+                cmd = new MySqlCommand();
+                cmd.Connection = cnn;
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+                da = new MySqlDataAdapter(cmd);
+                da.Fill(dTable);
+                this.Cerrar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                return false;
+            }
         }
 
-        
+        public bool LeerTabla(string procedure, Parametros[] campos)
+        {
+            dTable = new DataTable();
+            try
+            {
+                this.Abrir();
+                cmd = new MySqlCommand();
+                cmd.Connection = cnn;
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+                for (int i = 0; i < campos.Length; i++)
+                {
+                    cmd.Parameters.Add(campos[i].NombreParametro, campos[i].Valor);
+                }
+                da = new MySqlDataAdapter(cmd);
+                da.Fill(dTable);
+                this.Cerrar();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                return false;
+            }
+        }
     }
 }

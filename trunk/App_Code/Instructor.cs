@@ -5,36 +5,36 @@ using System.Text;
 
 namespace empatiagamt
 {
-    public class Instructor : Persona, ICrud
+    public class Instructor : Persona
     {
         private Curriculum curriculum;
     
         public Instructor()
         {
-            throw new System.NotImplementedException();
+            
         }
 
-        public Instructor(string idpersona,string no, string ap, string am, string fnac, string ecivil, string telcasa, string cel, string email, string rutafoto) :base(idpersona,no,ap,am,fnac,ecivil,telcasa,cel,email,rutafoto)
+        public Instructor(string idpersona,string no, string ap, string am, string fnac, string ecivil,List<Parametros[]> tels, string email, string rutafoto) :base(idpersona,no,ap,am,fnac,ecivil,tels,email,rutafoto)
         {
             throw new System.NotImplementedException();
         }
 
-        bool ICrud.Agregar()
+        public bool Agregar()
         {
             throw new NotImplementedException();
         }
 
-        bool ICrud.Eliminar()
+        public bool Eliminar()
         {
             throw new NotImplementedException();
         }
 
-        bool ICrud.Modificar()
+        public bool Modificar()
         {
             throw new NotImplementedException();
         }
 
-        bool ICrud.Mostrar()
+        public bool Mostrar()
         {
             throw new NotImplementedException();
         }
