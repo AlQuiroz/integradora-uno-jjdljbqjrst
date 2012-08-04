@@ -18,6 +18,7 @@
 <!--Funciones para forma JavaScrip-->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+Textea en la sigiente area: <br />
 <!--  Text Editor -->
 <textarea id="tinyeditor" style="width: 400px; height: 200px"></textarea>
  <script type="text/javascript">

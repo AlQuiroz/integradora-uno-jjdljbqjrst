@@ -1,11 +1,51 @@
-* { padding:0; margin:0; outline:0; }
-body {
-	background:#000;
-	font-family: Arial, sans-serif;
-	font-size:12px;
-	line-height:20px;
-	color:#252525;
+/* Rodolfo */
+.flt{float:left;border:0;}
+
+.fltr{float:right;border:0;}
+
+.dis{display:inline;}
+
+.clr{clear:left;}
+
+/*TOP*/
+	
+.tp_mbg
+	{
+		width:996px;
+		margin-top:20px;
+		
+    height: 38px;
 }
+	
+.tp_img2
+	{margin:22px 0px 0px 36px;}
+
+.tp_img3
+	{margin:20px 0px 0px 36px;}
+	
+.tp_bg1
+	{
+		width:999px;
+		background:url(images/logotipo.png) no-repeat;
+		padding-bottom:30px;
+    height: 299px;
+}
+	
+.tp_logo	
+	{margin:177px 0px 0px 79px;}
+	
+.tp_bg2
+	{
+		width:505px;
+		height:304px;
+		background:url(images/logotipo.png) no-repeat;
+	}
+
+
+/* Rodolfo */
+
+* { padding:0; margin:0; outline:0; }
+
 input, textarea, select { font-family: Arial, sans-serif; font-size:12px; }
 
 .notext { font-size:0; line-height:0; text-indent: -4000px; display:block; }
@@ -36,12 +76,16 @@ h2, h3,
 h1#logo { font-size:0; line-height:0; width:216px; height:90px; float:left; }
 h1#logo a{ display:block; height:90px; text-indent: -4000px; background:url(images/logo.gif); }
 
-.shell { width:980px; margin:0 auto; }
+.shell { width:1080px; height:auto; margin:0 auto; }
 
 #header { height:90px; background:url(images/header.gif); }
 
-#navigation { float:right; }
-#navigation ul{ float:left; list-style-type: none; padding-top:37px; font-size:14px;}
+#navigation { float:right;
+    width: 472px;
+}
+#navigation ul{ float:right; list-style-type: none; padding-top:37px; font-size:14px;
+    width: 641px;
+}
 #navigation ul li{ float:left; display:inline; height:21px; background:url(images/nav-border.gif) repeat-y right 0; padding:0 20px 0 0; margin-right:20px; position:relative; }
 #navigation ul li.last{background:transparent; padding-right:0; margin-right:0; }
 #navigation ul li a{ float:left; color:#fff; text-decoration: none;}
@@ -54,7 +98,7 @@ h1#logo a{ display:block; height:90px; text-indent: -4000px; background:url(imag
 
 #navigation ul li a.hover em{ background-position:0 0}
 
-#slider { height:298px; background:url(images/slider.gif); }
+#slider { height:298px; width:1299px;  background:url(images/slider.gif); }
 
 .slides { width:980px; height:298px; position:relative; overflow:hidden; color:#b6b6b6; }
 .slides .jcarousel-clip { width:980px; height:298px; position:relative; overflow:hidden; }
@@ -106,5 +150,5 @@ a.more { font-size:10px; background:url(images/more.gif) no-repeat 0 center; pad
 #footer .right span{ padding:0 1px;}
 #footer .right a{ text-decoration: none; color:#939393;}
 #footer .right a:hover{ color:#f6cb44;}
-.footer-logo { float:left; width:169px; height:34px; background:url(images/footer-logo.gif); }
+.footer-logo { float:left; width:169px; height:34px; background:url(images/footer-logo.gif); 
 
