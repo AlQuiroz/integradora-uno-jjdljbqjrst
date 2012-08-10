@@ -1,0 +1,70 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Empatia Gamt Consultores</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link href="../Styles/style.css" rel="stylesheet" type="text/css" />
+<link href="../Styles/dolphin.css" rel="stylesheet" type="text/css" />
+
+<link href="../Styles/sesyforms.css" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.2/mootools-yui-compressed.js"></script>
+<script type="text/javascript" src="../Scripts/sexyforms.v1.3.mootools.min.js"></script>
+<link type="text/css" rel="stylesheet" href="../Styles/blue/sexyforms-blue.css"  media="all" id="theme" />
+
+<script type="text/javascript">
+    window.addEvent('domready', function () {
+        $$(".sexyform input", ".sexyform select", ".sexyform textarea").each(function (el) {
+            el.DoSexy();
+        });
+    });
+</script>
+<asp:ContentPlaceHolder ID="contentheader" runat="server">
+
+</asp:ContentPlaceHolder>
+
+</head>
+
+ <body>
+<div style="width:1000px; margin:auto; height: 412px;">
+  
+  <div class="flt tp_mbg">
+   
+    <div id="dolphincontainer">
+          <div id="dolphinnav">
+            <ul>
+              <li><a href="http://www.free-css.com/" class="current"><span>CSS Templates</span></a></li>
+              <li><a href="http://www.free-css.com/"><span>CSS Layouts</span></a></li>
+              <li><a href="http://www.free-css.com/"><span>CSS Books</span></a></li>
+              <li><a href="http://www.free-css.com/"><span>CSS Menus</span></a></li>
+              <li><a href="http://www.free-css.com/"><span>CSS Tutorials</span></a></li>
+              <li><a href="http://www.free-css.com/"><span>CSS Reference</span></a></li>
+              <li><a rel="nofollow" target="_blank" href="http://www.13styles.com" title="13styles.com"><span>13styles</span></a></li>
+            </ul>
+          </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <span class="flt tp_bg1"> </span> 
+ </div>
+
+<!--TOP ENDS HERE-->
+<div style="width:999px; margin:auto;" id="box">
+ <form id="form1" runat="server" method="get" class="sexyform">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+ </form>   
+</div>
+<!--RIGHT ENDS HERE-->
+<!--FOOTER STARTS HERE-->
+<div style="width:1000px; margin:auto;"> <span class="flt" style="color:#FFFFFF; margin:16px 0px 0px 196px; font:11px/14px tahoma; padding-bottom:19px;"><a href="http://www.buytemplates.net/CSS-XHTML-web-templates.aspx" style="color:#FFFFFF;">Css/Xhtml template</a> from buytemplates.net. All Rights Reserved.</span> </div>
+<!--FOOTER ENDS HERE-->
+</body>
+</html>
