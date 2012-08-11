@@ -13,6 +13,12 @@ namespace empatiagamt
         {
             get { return _ListEscuela; }
         }
+        private Escuela objEscuela;
+        public Escuela ObjEscuela
+        {
+            get { return objEscuela; }
+            set { objEscuela = value; }
+        }
         private int idescuela;
         public int Idescuela
         {
@@ -64,6 +70,11 @@ namespace empatiagamt
             Telefono = tele;
         }
 
+        public Escuela(int id)
+        {
+            Idescuela = id;
+        }
+
         public Escuela(string nom, string dire, string tele)
         {
             NombreEscuela = nom;
@@ -79,11 +90,11 @@ namespace empatiagamt
         public override bool Agregar()
         {
             Parametros[] param = new Parametros[3];
-            param[0] = new Parametros("_nom", NombreEscuela);
-            param[1] = new Parametros("_dir", Direccion);
-            param[2] = new Parametros("_tel", Telefono);
+            param[0] = new Parametros("nom", NombreEscuela);
+            param[1] = new Parametros("dir", Direccion);
+            param[2] = new Parametros("tel", Telefono);
 
-            if (!EjecutarStore(param, "escuelaAltas"))
+            if (!EjecutarStore(param, "escuelasAltas"))
             {
                 return false;
             } return true;
@@ -92,9 +103,9 @@ namespace empatiagamt
         public override bool Eliminar()
         {
             Parametros[] param = new Parametros[1];
-            param[0] = new Parametros("_id", Idescuela.ToString());
+            param[0] = new Parametros("idEsc", Idescuela.ToString());
 
-            if (!EjecutarStore(param, "escuelabaja"))
+            if (!EjecutarStore(param, "escuelasBorrar"))
             {
                 return false;
             } return true;
@@ -103,12 +114,12 @@ namespace empatiagamt
         public override bool Modificar()
         {
             Parametros[] param = new Parametros[4];
-            param[0] = new Parametros("_id", Idescuela.ToString());
-            param[1] = new Parametros("_nom", NombreEscuela);
-            param[2] = new Parametros("_dir", Direccion);
-            param[3] = new Parametros("_tel", Telefono);
+            param[0] = new Parametros("idEsc", Idescuela.ToString());
+            param[1] = new Parametros("nom", NombreEscuela);
+            param[2] = new Parametros("dir", Direccion);
+            param[3] = new Parametros("tel", Telefono);
 
-            if (!EjecutarStore(param, "escuelaModificar"))
+            if (!EjecutarStore(param, "escuelasModificar"))
             {
                 return false;
             } return true;
@@ -123,6 +134,22 @@ namespace empatiagamt
                 {
                     DataRow row = DTable.Rows[i];
                     ListEscuela.Add(new Escuela(Convert.ToInt32(row[0]), row[1].ToString(), row[2].ToString(), row[3].ToString()));
+                }
+                return true;
+            } return false;
+        }
+
+        public bool MostrarEscuela() 
+        {
+            Parametros[] param = new Parametros[1];
+            param[0] = new Parametros("idEscu", Idescuela.ToString());
+
+            if (LeerTabla("escuelasmostraruno",param))
+            {
+                for (int i = 0; i < DTable.Rows.Count; i++)
+                {
+                    DataRow row = DTable.Rows[i];
+                    objEscuela = new Escuela(Convert.ToInt32(row[0]), row[1].ToString(), row[2].ToString(), row[3].ToString());
                 }
                 return true;
             } return false;
