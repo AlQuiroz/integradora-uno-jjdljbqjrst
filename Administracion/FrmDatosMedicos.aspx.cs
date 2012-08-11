@@ -16,16 +16,27 @@ public partial class FrmDatosMedicos : System.Web.UI.Page
             lblFecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
             lblIdParticipante.Text = Request.QueryString["idParticipante"];
             lblIdHistorial.Text = Request.QueryString["idHistorial"];
-            LlenarForm();
         }
+        LlenarForm();
+
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
+        //la institucion y el tratamiento siempre se modifica
         histMedico = new empatiagamt.HstorialMedico( lblIdHistorial.Text, txtInstitcion.Text, txtTratamiento.Text);
-        imc = new empatiagamt.HstorialMedico(lblIdHistorial.Text, Convert.ToDouble(txtTalla.Text), Convert.ToDouble(txtPeso.Text));
+        
         histMedico.Modificar();
-        if(txtPeso.Text!="" &&txtTalla.Text!="")
-            imc.Agregar();
+
+        if (validarNumeroDecimal(txtPeso.Text))
+        {
+            if (validarNumeroDecimal(txtTalla.Text))
+            {
+                //si los campos de peso y talla tienen datos, tonces se crea un objeto que reciba esa información
+                imc = new empatiagamt.HstorialMedico(lblIdHistorial.Text, Convert.ToDouble(txtTalla.Text), Convert.ToDouble(txtPeso.Text));
+                imc.Agregar();
+            }
+        }
+        
         
         LlenarForm();
     }
@@ -60,5 +71,23 @@ public partial class FrmDatosMedicos : System.Web.UI.Page
         imc.Mostrar(lblIdParticipante.Text);
         gridMes.DataSource = imc.DTable;
         gridMes.DataBind();
+    }
+
+    private bool validarNumeroDecimal(string numero) {
+        int contPuntos = 0;
+        for (int i = 0; i < numero.Length; i++) {
+
+            if (char.IsNumber(numero[i])) { }
+            else
+            {
+                if (numero[i] == '.')
+                {
+                    contPuntos++;
+                }
+                else { return false; }
+                if (contPuntos > 1) return false;
+            }
+        }
+        return true;
     }
 }

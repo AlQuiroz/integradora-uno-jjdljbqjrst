@@ -15,10 +15,8 @@ public partial class Participantes : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Page.IsPostBack == false)
-        {
-            mostrarListadoParticipante();
-        }
+
+        mostrarListadoParticipante();
     }
 
 
@@ -26,23 +24,27 @@ public partial class Participantes : System.Web.UI.Page
 
     protected void btnAgregarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "~" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
     }
 
     protected void btnQuitarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
+        try
+        {
+            listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
+        }
+        catch { }
     }
     protected void btnModificarTel_Click(object sender, EventArgs e)
     {
         listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "~" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
     }
 
     protected void listBoxTelefonos_SelectedIndexChanged(object sender, EventArgs e)
     {
         //LlenarcamposTelefonos();
-        string[] tel = listBoxTelefonos.Items[listBoxTelefonos.SelectedIndex].Value.ToString().Split('~');
+        string[] tel = listBoxTelefonos.Items[listBoxTelefonos.SelectedIndex].Value.ToString().Split('/');
         txtTipoTelefono.Text = tel[0];
         txtNumeroTel.Text = tel[1];
     }
@@ -53,7 +55,7 @@ public partial class Participantes : System.Web.UI.Page
         empatiagamt.Parametros[] telefono;
         for (int i = 0; i < listBoxTelefonos.Items.Count; i++)
         {
-            string[] datos = listBoxTelefonos.Items[i].ToString().Split('~');
+            string[] datos = listBoxTelefonos.Items[i].ToString().Split('/');
             telefono = new empatiagamt.Parametros[3];
             telefono[0] = new empatiagamt.Parametros("tipo", datos[0].ToString());
             telefono[1] = new empatiagamt.Parametros("numero" , datos[1].ToString());
