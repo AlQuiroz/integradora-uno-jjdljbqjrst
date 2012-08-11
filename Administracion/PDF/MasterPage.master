@@ -22,52 +22,28 @@
         });
     });
 </script>
+<asp:ContentPlaceHolder ID="ContentPlaceHeader" runat="server">
 
-   <asp:ContentPlaceHolder id="ContentPlaceHeader" runat="server">
-
-   </asp:ContentPlaceHolder>
+</asp:ContentPlaceHolder>
 </head>
 <body>
-<!--TOP STARTS HERE-->
 <div style="width:1000px; margin:auto; height: 412px;">
-  <div class="flt tp_mbg">
-    <div id="dolphincontainer">
-          <div id="dolphinnav">
-            <ul>
-              <li><a href="http://www.free-css.com/" class="current"><span>CSS Templates</span></a></li>
-              <li><a href="http://www.free-css.com/"><span>CSS Layouts</span></a></li>
-              <li><a href="http://www.free-css.com/"><span>CSS Books</span></a></li>
-              <li><a href="http://www.free-css.com/"><span>CSS Menus</span></a></li>
-              <li><a href="http://www.free-css.com/"><span>CSS Tutorials</span></a></li>
-              <li><a href="http://www.free-css.com/"><span>CSS Reference</span></a></li>
-              <li><a rel="nofollow" target="_blank" href="http://www.13styles.com" title="13styles.com"><span>13styles</span></a></li>
-            </ul>
-          </div>
-    </div>
-  </div>
-  <br />
-  <br />
   <span class="flt tp_bg1"> </span> 
  </div>
+
 <!--TOP ENDS HERE-->
 <div style="width:999px; margin:auto;" id="box">
-
- <form id="frms" runat="server" method="post" class="sexyform">
-<center>
-<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+ <form id="form1" runat="server" method="get" class="sexyform">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
-</asp:ContentPlaceHolder>
-</center>
+        </asp:ContentPlaceHolder>
+    </div>
+ </form>   
 </div>
-</form>
-</div>
+<!--RIGHT ENDS HERE-->
 <!--FOOTER STARTS HERE-->
-<div style="width:1000px; margin:auto;">
-<span class="flt" style="color:#FFFFFF; margin:16px 0px 0px 196px; font:11px/14px tahoma; padding-bottom:19px;"><a href="http://www.buytemplates.net/CSS-XHTML-web-templates.aspx" style="color:#FFFFFF;">Css/Xhtml template</a> from buytemplates.net. All Rights Reserved.</span> 
-<asp:ContentPlaceHolder ID="contentfoother" runat="server">
-
-</asp:ContentPlaceHolder>
-</div>
+<div style="width:1000px; margin:auto;"> &nbsp;</div>
 <!--FOOTER ENDS HERE-->
 </body>
 </html>

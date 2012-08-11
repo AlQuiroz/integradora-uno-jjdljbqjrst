@@ -1,7 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="FormularioEscuelas.aspx.cs" Inherits="FormularioEscuelas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="FormularioEscuelas.aspx.cs" Inherits="FormularioEscuelas" %>
+
+<asp:Content ID="content2" ContentPlaceHolderID="contentheader" runat ="server">
+<script src="../Scripts/TablaSorter.js" type="text/jscript"></script>
+<link href="../Styles/TablaSorter.css" type="text/css" />
+</asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-Escuela<br />
+<h2>Escuelas</h2><br />
+<center>
+    <asp:Button ID="btnnueva" runat="server" Text="Agregar Escuela Nueva" />
+    <br />
+    <br />
 <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
 		<thead>
 			<tr>
@@ -42,6 +51,6 @@ Escuela<br />
       sorter.limitid = "pagelimit";
       sorter.init("table", 1);
   </script>
-
+  </center>
 </asp:Content>
 

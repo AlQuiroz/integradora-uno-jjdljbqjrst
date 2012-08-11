@@ -36,13 +36,15 @@
     <div id="dolphincontainer">
           <div id="dolphinnav">
             <ul>
-              <li><a href="http://www.free-css.com/" class="current"><span>CSS Templates</span></a></li>
-              <li><a href="http://www.free-css.com/"><span>CSS Layouts</span></a></li>
-              <li><a href="http://www.free-css.com/"><span>CSS Books</span></a></li>
-              <li><a href="http://www.free-css.com/"><span>CSS Menus</span></a></li>
+              <li><a href="Participantes.aspx"><span>Participantes</span></a></li>
+              <li><a href="Profesores.aspx"><span>Profesores</span></a></li>
+              <li><a href="Impresion_Constacia.aspx"><span>Constacias</span></a></li>
+              <li><a href="#"><span>Facturas</span></a></li>
+              <!--
               <li><a href="http://www.free-css.com/"><span>CSS Tutorials</span></a></li>
               <li><a href="http://www.free-css.com/"><span>CSS Reference</span></a></li>
               <li><a rel="nofollow" target="_blank" href="http://www.13styles.com" title="13styles.com"><span>13styles</span></a></li>
+            -->
             </ul>
           </div>
     </div>
