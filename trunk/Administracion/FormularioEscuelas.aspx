@@ -8,7 +8,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <h2>Escuelas</h2><br />
 <center>
-    <asp:Button ID="btnnueva" runat="server" Text="Agregar Escuela Nueva" />
+    <asp:Button ID="btnnueva" runat="server" Text="Agregar Escuela Nueva" 
+        onclick="btnnueva_Click" />
     <br />
     <br />
 <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
@@ -30,8 +31,8 @@
 				<td><%=Le[i].NombreEscuela.ToString()%></td>
 				<td><%=Le[i].Direccion.ToString()%></td>
                 <td><%=Le[i].Telefono.ToString()%></td>
-				<td><a href="">Eliminar</a></td>
-                <td><a href="">Modificar</a></td>  
+				<td><a href="AgregarEscuelas.aspx?Accion=Eliminar&Elemento=<%=Le[i].Idescuela.ToString()%> ">Eliminar</a></td>
+                <td><a href="AgregarEscuelas.aspx?Accion=Modificar&Elemento=<%=Le[i].Idescuela.ToString()%> ">Modificar</a></td>  
 			</tr>
             <%} %>
 		</tbody>
