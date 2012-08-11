@@ -51,6 +51,9 @@
   </div>
   <br />
   <br />
+  <br />
+    <br />
+  <br />
   <span class="flt tp_bg1"> </span> 
  </div>
 
@@ -66,7 +69,7 @@
 </div>
 <!--RIGHT ENDS HERE-->
 <!--FOOTER STARTS HERE-->
-<div style="width:1000px; margin:auto;"> <span class="flt" style="color:#FFFFFF; margin:16px 0px 0px 196px; font:11px/14px tahoma; padding-bottom:19px;"><a href="http://www.buytemplates.net/CSS-XHTML-web-templates.aspx" style="color:#FFFFFF;">Css/Xhtml template</a> from buytemplates.net. All Rights Reserved.</span> </div>
+<div style="width:1000px; margin:auto;"> &nbsp;</div>
 <!--FOOTER ENDS HERE-->
 </body>
 </html>

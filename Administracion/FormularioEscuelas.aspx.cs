@@ -20,4 +20,8 @@ public partial class FormularioEscuelas : System.Web.UI.Page
             Le = esc.ListEscuela;
         }
     }
+    protected void btnnueva_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AgregarEscuelas.aspx");
+    }
 }
