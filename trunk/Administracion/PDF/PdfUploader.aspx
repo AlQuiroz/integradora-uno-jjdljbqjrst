@@ -5,6 +5,8 @@
 </asp:content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <center>
+    <div>
     Agregar un Archivo&nbsp; de CV para profesores:
     <br />
 
@@ -20,5 +22,7 @@
     <br />
     archivos en formato .PDF preferiblemente optimisado para web.<br />
 &nbsp;
+    </div>
+</center>
 </asp:Content>
 
