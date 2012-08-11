@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="Participantes.aspx.cs" Inherits="Participantes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="FrmFamiliares.aspx.cs" Inherits="FrmFamiliares" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <form id="001" action="Historial_Medico_Participante.aspx">
-    <fieldset>
+<form id="001" action="Historial_Medico_Participante.aspx">
+    <fieldset style="border-style:none">
 <table style="width: 1007px; height: 266px; ">
     <tr>
         <td style="height: 62px; width: 238px;" align="left">
@@ -40,14 +40,18 @@
             <br />
             <asp:Button ID="btnCargar" runat="server" onclick="btnCargar_Click" 
                 Text="Cargar" UseSubmitBehavior="False" />
+            <asp:Label ID="lblIdParticipante" runat="server"></asp:Label>
         </td>
     </tr>
     <tr>
         <td style="width: 238px; height: 32px;" align="left">
-            <div class="rowElem"> <label style="font-weight:bold" >Sexo:</label>&nbsp;<br />
-&nbsp;<select name="sexo" id="sexo" runat="server" clientidmode="Static" style=" font-family:Verdana;font-size:8pt;">
-				          <option value="H">MASCULINO</option>
-				          <option value="M">FEMENINO</option>
+            <div class="rowElem"> Parentezco<label style="font-weight:bold" >:</label>&nbsp;<br />
+&nbsp;<select name="sexo" id="slcParentezco" runat="server" clientidmode="Static" style=" font-family:Verdana;font-size:8pt;" onclick="return sexo_onclick()">
+				          <option value="-1">-----</option>
+                          <option value="Padre">Padre</option>
+                          <option value="Madre">Madre</option>
+                          <option value="Hermano">Hermano</option>
+				          <option value="Hijo">Hijo</option>
 			          </select> 
             </div>
         </td>
@@ -126,21 +130,21 @@
                  ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
         </td>
         <td style="width: 246px;" align="left">
-            <label style="font-weight:bold" > Dirección:&nbsp;<br /></label>
-            <asp:TextBox ID="txtDireccion" runat="server" Width="199px" 
+            Empresa<label style="font-weight:bold" >:&nbsp;<br /></label>
+            <asp:TextBox ID="txtEmpresa" runat="server" Width="199px" 
                 ClientIDMode="Static">asdads</asp:TextBox>
              <br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
-                   ControlToValidate="txtDireccion" ErrorMessage="RequiredFieldValidator" 
+                   ControlToValidate="txtEmpresa" ErrorMessage="RequiredFieldValidator" 
                   ForeColor="Red">*</asp:RequiredFieldValidator>
              <br />
         </td>
         <td align="left">
-             <label style="font-weight:bold" > Edad:&nbsp;<br /></label>
-            <asp:TextBox ID="txtEdad" runat="server" Width="79px" ClientIDMode="Static">asdasd</asp:TextBox>
+             Puesto<label style="font-weight:bold" >:&nbsp;<br /></label>
+            <asp:TextBox ID="txtPuesto" runat="server" Width="79px" ClientIDMode="Static">asdasd</asp:TextBox>
              <br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
-                   ControlToValidate="txtEdad" ErrorMessage="RequiredFieldValidator" 
+                   ControlToValidate="txtPuesto" ErrorMessage="RequiredFieldValidator" 
                   ForeColor="Red">*</asp:RequiredFieldValidator>
         </td>
     </tr>
@@ -153,7 +157,7 @@
     </table>
     </fieldset>
 
-    <fieldset id="TablaPrticipantes">
+    <fieldset id="TablaFamiliares" style="border-style:none">
     
 <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
 		<thead>
@@ -168,8 +172,6 @@
                 <th style="font-size: large; width: 75px;"><h3>E-mail</h3></th>
                 <th style="font-size: large"><h3>Modficar</h3></th>
                 <th style="font-size: large"><h3>Eliminar</h3></th>
-                <th style="font-size: large"><h3>Historial IMC</h3></th>
-                <th style="font-size: large"><h3>Familiar</h3></th>
                 <th style="visibility:hidden; width: 1px;" ><h3>Rutafoto</h3></th>
                 <th style="visibility:hidden; width: 1px;"><h3>Idhistorial</h3></th>
 			</tr>
@@ -178,12 +180,12 @@
         
 		<tbody>
             <%
-            empatiagamt.Participante p;
+            empatiagamt.Familiar p;
             try
             {
-                for (int i = 0; i < ListadoParticipantes.Count; i++)
+                for (int i = 0; i < ListadoFamiliares.Count; i++)
                 {
-                    p = (empatiagamt.Participante)ListadoParticipantes[i];
+                    p = (empatiagamt.Familiar)ListadoFamiliares[i];
               
               %>
             <tr>
@@ -195,12 +197,10 @@
 				<td style="width: 95px"><%=p.FNac%></td>
                 <td style="width: 123px"><%=p.EdoCivil%></td>
                 <td style="width: 75px"><a href="mailto:#"><%=p.Email%></a></td>
-                <th style="font-size: large;width=10px"><h3>  <a href="FrmModificarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/editLog.png"/></a></h3></th>
-                <th style="font-size: large;width=10px"><h3><a href="FrmEliminarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/delete.png" /></a></h3></th>
-                <th style="font-size: large;width=10px "><h3><a href="FrmDatosMedicos.aspx?idParticipante=<%=p.Idpersona%>&idHistorial=<%=p.IdHistorial%>"><img src="../Styles/images/imcLog.png" /></a></h3></th>
-                <th style="font-size: large; width=10px" ><h3><a href="FrmFamiliares.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/family.png" /></a></h3></th>
+                <th style="font-size: large;width:10px"><h3>  <a href="FrmModificarFamiliar.aspx?idFamiliar=<%=p.Idpersona%>&idParticipante=<%=lblIdParticipante.Text %>"><img src="../Styles/images/editLog.png"/></a></h3></th>
+                <th style="font-size: large;width:10px"><h3><a href="FrmEliminarFamiliar.aspx?idFamiliar=<%=p.Idpersona%>"><img src="../Styles/images/delete.png" /></a></h3></th>
                 <td style="visibility:hidden; width: 2px;"><%=p.RutaFoto%></td>
-                <td style="visibility:hidden; width: 2px;"><%=p.IdHistorial%></td>
+                <td style="visibility:hidden; width: 2px;"></td>
 			</tr>
 
             <% }
@@ -237,4 +237,6 @@
 
     </form>
 </asp:Content>
+
+
 

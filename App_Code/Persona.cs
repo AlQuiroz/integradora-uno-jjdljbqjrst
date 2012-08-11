@@ -158,6 +158,7 @@ namespace empatiagamt
         }
 
         public virtual bool BuscarPersona(string valor) { return false; }
+        public virtual bool BuscarPersona(int valor) { return false; }
         public virtual bool Agregar(string p) { return false; }
         public virtual bool QuitarFamiliar(string idFam) { return false; }
     }

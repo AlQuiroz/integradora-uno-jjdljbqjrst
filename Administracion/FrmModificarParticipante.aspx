@@ -1,8 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="Participantes.aspx.cs" Inherits="Participantes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="FrmModificarParticipante.aspx.cs" Inherits="FrmModificarParticipante" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-    <form id="001" action="Historial_Medico_Participante.aspx">
-    <fieldset>
+<form id="modificarParticipante">
+<fieldset>
 <table style="width: 1007px; height: 266px; ">
     <tr>
         <td style="height: 62px; width: 238px;" align="left">
@@ -32,14 +31,10 @@
         </td>
         <td style="height: 62px" align="left">
             <div><asp:Image ID="Image1" runat="server" Height="113px" Width="275px" 
-                    ClientIDMode="Static" ImageUrl="~/images/logotipo.png" 
-                    ImageAlign="Middle" /></div>
+                    ClientIDMode="Static" ImageUrl="~/images/logotipo.png" /></div>
              <div class="rowsElem"><span> <label style="font-weight:bold" >Fotografia:</label></span>&nbsp;</div>
              
-            <asp:FileUpload ID="fUploadFoto" runat="server" ClientIDMode="Static" />
-            <br />
-            <asp:Button ID="btnCargar" runat="server" onclick="btnCargar_Click" 
-                Text="Cargar" UseSubmitBehavior="False" />
+            <asp:FileUpload ID="FileUpload2" runat="server" ClientIDMode="Static"  CssClass="sexy-button"/>
         </td>
     </tr>
     <tr>
@@ -111,7 +106,7 @@
                     <td>
                         <asp:Button ID="btnQuitarTel" runat="server" Text="Quitar" 
                             ClientIDMode="Static" UseSubmitBehavior="False" 
-                            onclick="btnQuitarTel_Click" />
+                            onclick="btnQuitarTel_Click" style="height: 26px" />
                     </td>
                 </tr>
             </table>
@@ -147,94 +142,11 @@
     <tr>
     <td colspan="4">
         <asp:Button ID="btnGuardar" runat="server" onclick="btnGuardar_Click" 
-            Text="Guardar" UseSubmitBehavior="False" />
+            Text="Guardar cambios" UseSubmitBehavior="False" />
+        <asp:Label ID="lblIdPersona" runat="server" Text="(w.w)"></asp:Label>
         </td>
     </tr>
     </table>
     </fieldset>
-
-    <fieldset id="TablaPrticipantes">
-    
-<table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
-		<thead>
-			<tr>
-				<th class="nosort" style="font-size: large"><h3>ID</h3></th>
-				<th style="font-size: large; width: 50px;"><h3>Clave</h3></th>
-				<th style="font-size: large; width: 139px;"><h3>Nombre</h3></th>
-				<th style="font-size: large; width: 121px;"><h3>Apellido paterno</h3></th>
-				<th style="font-size: large; width: 121px;"><h3>Apellido Materno</h3></th>
-                <th style="font-size: large; width: 95px;"><h3>fecha nacimiento</h3></th>
-                <th style="font-size: large; width: 123px;"><h3>Edo civil</h3></th>
-                <th style="font-size: large; width: 75px;"><h3>E-mail</h3></th>
-                <th style="font-size: large"><h3>Modficar</h3></th>
-                <th style="font-size: large"><h3>Eliminar</h3></th>
-                <th style="font-size: large"><h3>Historial IMC</h3></th>
-                <th style="font-size: large"><h3>Familiar</h3></th>
-                <th style="visibility:hidden; width: 1px;" ><h3>Rutafoto</h3></th>
-                <th style="visibility:hidden; width: 1px;"><h3>Idhistorial</h3></th>
-			</tr>
-		</thead>
-        <!--Contenido de la tabla-->
-        
-		<tbody>
-            <%
-            empatiagamt.Participante p;
-            try
-            {
-                for (int i = 0; i < ListadoParticipantes.Count; i++)
-                {
-                    p = (empatiagamt.Participante)ListadoParticipantes[i];
-              
-              %>
-            <tr>
-				<td>1</td>
-                <td style="width: 50px"><%=p.Idpersona%></td>
-				<td style="width: 139px"><%=p.Nombre%></td>
-				<td style="width: 121px"><%=p.APaterno%></td>
-				<td style="width: 121px"><%=p.AMaterno%></td>
-				<td style="width: 95px"><%=p.FNac%></td>
-                <td style="width: 123px"><%=p.EdoCivil%></td>
-                <td style="width: 75px"><a href="mailto:#"><%=p.Email%></a></td>
-                <th style="font-size: large;width=10px"><h3>  <a href="FrmModificarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/editLog.png"/></a></h3></th>
-                <th style="font-size: large;width=10px"><h3><a href="FrmEliminarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/delete.png" /></a></h3></th>
-                <th style="font-size: large;width=10px "><h3><a href="FrmDatosMedicos.aspx?idParticipante=<%=p.Idpersona%>&idHistorial=<%=p.IdHistorial%>"><img src="../Styles/images/imcLog.png" /></a></h3></th>
-                <th style="font-size: large; width=10px" ><h3><a href="FrmFamiliares.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/family.png" /></a></h3></th>
-                <td style="visibility:hidden; width: 2px;"><%=p.RutaFoto%></td>
-                <td style="visibility:hidden; width: 2px;"><%=p.IdHistorial%></td>
-			</tr>
-
-            <% }
-            }
-            catch { }
-                %>
-			
-            
-		</tbody>
-        <!--Fin del contenido de la tabla-->
-  </table>
-  <div id="controls">
-		<div id="perpage">
-			<select onchange="sorter.size(this.value)">
-			<option value="5">5</option>
-				<option value="10" selected="selected">10</option>
-				<option value="20">20</option>
-				<option value="50">50</option>
-				<option value="100">100</option>
-			</select>
-			<span>Entries Per Page</span>
-		</div>
-		<div id="navigation">
-			<img src="../Styles/images/asc.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1,true)" />
-			<img src="../Styles/images/previous.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1)" />
-			<img src="../Styles/images/next.gif" width="16" height="16" alt="First Page" onclick="sorter.move(1)" />
-			<img src="../Styles/images/last.gif" width="16" height="16" alt="Last Page" onclick="sorter.move(1,true)" />
-		</div>
-		<div id="text">Displaying Page <span id="currentpage"></span> of <span id="pagelimit"></span></div>
-	</div>
-    </fieldset>
-
-
-
-    </form>
+</form>
 </asp:Content>
-

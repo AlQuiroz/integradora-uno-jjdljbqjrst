@@ -5,7 +5,7 @@ using System.Text;
 
 namespace empatiagamt
 {
-    class Familiar : Persona
+    public class Familiar : Persona
     {
         private string parentezco;
         public string Parentezco
@@ -116,6 +116,15 @@ namespace empatiagamt
             return LeerTabla("FamiliarBusqueda", param);
             //return LeerTabla("SBuscarFamiliaresParticipantes", param);
         }
+
+        public override bool BuscarPersona(int valor)
+        {
+            param = new Parametros[1];
+            //param[0] = new Parametros("p_idparticipante", valor);
+            param[0] = new Parametros("valor", ""+valor);
+            return LeerTabla("FamiliarBusquedaId", param);
+        }
+
         public bool FamiliarDeParticipante()
         {
             param = new Parametros[1];
