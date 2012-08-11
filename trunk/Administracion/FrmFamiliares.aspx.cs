@@ -19,27 +19,32 @@ public partial class FrmFamiliares : System.Web.UI.Page
             mostrarListadoFamiliares();
             lblIdParticipante.Text = Request.QueryString["idParticipante"];
         }
+        mostrarListadoFamiliares();
     }
     #region
 
     protected void btnAgregarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "~" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
     }
     protected void btnModificarTel_Click(object sender, EventArgs e)
     {
         listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "~" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
     }
     protected void btnQuitarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
+        try
+        {
+            listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
+        }
+        catch { }
     }
 
     protected void listBoxTelefonos_SelectedIndexChanged(object sender, EventArgs e)
     {
         //LlenarcamposTelefonos();
-        string[] tel = listBoxTelefonos.Items[listBoxTelefonos.SelectedIndex].Value.ToString().Split('~');
+        string[] tel = listBoxTelefonos.Items[listBoxTelefonos.SelectedIndex].Value.ToString().Split('/');
         txtTipoTelefono.Text = tel[0];
         txtNumeroTel.Text = tel[1];
     }

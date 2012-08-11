@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="Participantes.aspx.cs" Inherits="Participantes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="Participantes.aspx.cs" Inherits="Participantes" MaintainScrollPositionOnPostback="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <form id="001" action="Historial_Medico_Participante.aspx">
@@ -95,7 +95,8 @@
             
             <asp:ListBox ID="listBoxTelefonos" runat="server" Height="103px" Width="250px" 
                 ClientIDMode="Static" 
-                onselectedindexchanged="listBoxTelefonos_SelectedIndexChanged"></asp:ListBox>
+                onselectedindexchanged="listBoxTelefonos_SelectedIndexChanged" 
+                AutoPostBack="True"></asp:ListBox>
             <table style="width:100%;">
                 <tr>
                     <td>
