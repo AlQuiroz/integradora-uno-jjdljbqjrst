@@ -26,7 +26,7 @@ namespace empatiagamt
 
         public Conexion()
         {
-            cnn = new MySqlConnection("Server= localhost; Uid=root; pwd=12345;database=empatiagamt");
+            cnn = new MySqlConnection("Server= localhost; Uid=root; pwd=123;database=empatiagamt");
         }
 
         private bool Abrir()
