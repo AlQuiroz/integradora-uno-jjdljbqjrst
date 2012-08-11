@@ -1,10 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 
 namespace empatiagamt
 {
     public class Participante : Persona
     {
 
+        
+        private string idHistorial;
+        public string IdHistorial
+        {
+            get { return idHistorial; }
+            set { idHistorial = value; }
+        }
         private Parametros[] param;
         public Participante(string id, string no, string ap, string am, string f, string ecivil, List<Parametros[]> tels, string mail, string rutFoto)
             : base(id, no, ap, am, f, ecivil, tels, mail, rutFoto)
@@ -36,10 +44,17 @@ namespace empatiagamt
         {
             return base.Modificar();
         }
-
+        /// <summary>
+        /// Regresa un arrayList de los participantes
+        /// </summary>
+        /// <returns></returns>
         public override bool Mostrar()
         {
-            return LeerTabla("ParticipanteConsultar");
+            if (LeerTabla("ParticipanteConsultar"))
+            {
+                return true;
+            }
+            else { return false; }
         }
 
         public override bool BuscarPersona(string valor)
@@ -47,6 +62,14 @@ namespace empatiagamt
             param = new Parametros[1];
             param[0] = new Parametros("valor", valor);
             return LeerTabla("ParticpanteBusqueda", param);
+        }
+
+
+        public override bool BuscarPersona(int idParticipante)
+        {
+            param = new Parametros[1];
+            param[0] = new Parametros("id", ""+idParticipante);
+            return LeerTabla("ParticipanteBusquedaId", param);
         }
     }
 }
