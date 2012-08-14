@@ -14,9 +14,9 @@ public partial class FrmFamiliares : System.Web.UI.Page
     public ArrayList ListadoFamiliares = new ArrayList();
     protected void Page_Load(object sender, EventArgs e)
     {
-        mostrarListadoFamiliares();
-        
-        lblIdParticipante.Text = Request.QueryString["idParticipante"];
+        //mostrarListadoFamiliares();
+        if(Page.IsPostBack==false)
+            lblIdParticipante.Text = Request.QueryString["idParticipante"];
 
         mostrarListadoFamiliares();
     }
@@ -119,4 +119,8 @@ public partial class FrmFamiliares : System.Web.UI.Page
         }
     }
 
+    protected void btnTerminar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Administracion/Participantes.aspx");
+    }
 }

@@ -153,6 +153,8 @@
     <td colspan="4">
         <asp:Button ID="btnGuardar" runat="server" onclick="btnGuardar_Click" 
             Text="Guardar" UseSubmitBehavior="False" />
+        <asp:Button ID="btnTerminar" runat="server" onclick="btnTerminar_Click" 
+            Text="Terminar" />
         </td>
     </tr>
     </table>
