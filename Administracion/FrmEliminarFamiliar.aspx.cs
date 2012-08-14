@@ -35,7 +35,7 @@ public partial class FrmEliminarFamiliar : System.Web.UI.Page
             {
                 lblNombre.Text = part.DTable.Rows[0][1].ToString();
                 lblAPaterno.Text = part.DTable.Rows[0][2].ToString();
-                lblAPaterno.Text = part.DTable.Rows[0][3].ToString();
+                lblAMaterno.Text = part.DTable.Rows[0][3].ToString();
                 lblFechaNac.Text = "" + Convert.ToDateTime(part.DTable.Rows[0][4].ToString()).ToString("yyyy-MM-dd)");
                 lblEdoCivil.Text = part.DTable.Rows[0][5].ToString();
                 lblEmail.Text = part.DTable.Rows[0][6].ToString();
