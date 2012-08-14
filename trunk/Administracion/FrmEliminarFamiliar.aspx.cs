@@ -12,22 +12,24 @@ public partial class FrmEliminarFamiliar : System.Web.UI.Page
     {
 
         if (Page.IsPostBack == false) {
-            lblIdPersona.Text = Request.QueryString["idFamiliar"].ToString();
+            lblFamiliar.Text = Request.QueryString["idFamiliar"].ToString();
+            lblIdPersona.Text = Request.QueryString["idParticipante"].ToString();
             LlenartextBox();
         }
     }
     protected void btnEliminar_Click(object sender, EventArgs e)
     {
         part = new empatiagamt.Familiar();
-        part.Idpersona = lblIdPersona.Text;
-        part.Eliminar();
+        part.Idpersona = lblFamiliar.Text;
+        if(part.Eliminar())
+            Response.Redirect("~/Administracion/FrmFamiliares.aspx?idParticipante=" + lblIdPersona.Text);
     }
 
 
     private void LlenartextBox()
     {
         part = new empatiagamt.Familiar();
-        if (part.BuscarPersona(int.Parse(lblIdPersona.Text)))
+        if (part.BuscarPersona(int.Parse(lblFamiliar.Text)))
         {
             if (part.DTable.Rows.Count != 0)
             {
@@ -43,6 +45,6 @@ public partial class FrmEliminarFamiliar : System.Web.UI.Page
     }
     protected void btnCancelar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("");
+        Response.Redirect("~/Administracion/FrmFamiliares.aspx?idParticipante=" + lblIdPersona.Text);
     }
 }

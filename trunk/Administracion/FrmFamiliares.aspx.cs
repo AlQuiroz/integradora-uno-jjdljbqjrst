@@ -14,14 +14,13 @@ public partial class FrmFamiliares : System.Web.UI.Page
     public ArrayList ListadoFamiliares = new ArrayList();
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Page.IsPostBack == false)
-        {
-            mostrarListadoFamiliares();
-            lblIdParticipante.Text = Request.QueryString["idParticipante"];
-        }
+        mostrarListadoFamiliares();
+        
+        lblIdParticipante.Text = Request.QueryString["idParticipante"];
+
         mostrarListadoFamiliares();
     }
-    #region
+    #region : Manejos de telefonos
 
     protected void btnAgregarTel_Click(object sender, EventArgs e)
     {
@@ -55,7 +54,7 @@ public partial class FrmFamiliares : System.Web.UI.Page
         empatiagamt.Parametros[] telefono;
         for (int i = 0; i < listBoxTelefonos.Items.Count; i++)
         {
-            string[] datos = listBoxTelefonos.Items[i].ToString().Split('~');
+            string[] datos = listBoxTelefonos.Items[i].ToString().Split('/');
             telefono = new empatiagamt.Parametros[3];
             telefono[0] = new empatiagamt.Parametros("tipo", datos[0].ToString());
             telefono[1] = new empatiagamt.Parametros("numero", datos[1].ToString());
@@ -82,8 +81,6 @@ public partial class FrmFamiliares : System.Web.UI.Page
 
     #endregion
 
-
-
     protected void btnCargar_Click(object sender, EventArgs e)
     {
         string ruta = "~/FotosParticipantes/";
@@ -106,6 +103,7 @@ public partial class FrmFamiliares : System.Web.UI.Page
         per = new empatiagamt.Familiar();
         per.Mostrar(); // debe regresar un arrayList de personas.
         empatiagamt.Familiar part;
+        ListadoFamiliares.Clear();
         for (int i = 0; i < per.DTable.Rows.Count; i++)
         {
             part = new empatiagamt.Familiar();

@@ -40,9 +40,12 @@
     <tr>
         <td style="width: 238px; height: 32px;" align="left">
             <div class="rowElem"> <label style="font-weight:bold" >Sexo:</label>&nbsp;<br />
-&nbsp;<select name="sexo" id="sexo" runat="server" clientidmode="Static" style=" font-family:Verdana;font-size:8pt;">
-				          <option value="H">MASCULINO</option>
-				          <option value="M">FEMENINO</option>
+&nbsp;<select name="sexo" id="slcParentezco" runat="server" clientidmode="Static" style=" font-family:Verdana;font-size:8pt;" onclick="return sexo_onclick()">
+				          <option value="-1">-----</option>
+                          <option value="Padre">Padre</option>
+                          <option value="Madre">Madre</option>
+                          <option value="Hermano">Hermano</option>
+				          <option value="Hijo">Hijo</option>
 			          </select> 
             </div>
         </td>
@@ -122,21 +125,21 @@
                  ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
         </td>
         <td style="width: 246px;" align="left">
-            <label style="font-weight:bold" > Dirección:&nbsp;<br /></label>
-            <asp:TextBox ID="txtDireccion" runat="server" Width="199px" 
+            <strong>Empresa:</strong><label style="font-weight:bold" >&nbsp;<br /></label>
+            <asp:TextBox ID="txtEmpresa" runat="server" Width="199px" 
                 ClientIDMode="Static">asdads</asp:TextBox>
              <br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
-                   ControlToValidate="txtDireccion" ErrorMessage="RequiredFieldValidator" 
+                   ControlToValidate="txtEmpresa" ErrorMessage="RequiredFieldValidator" 
                   ForeColor="Red">*</asp:RequiredFieldValidator>
              <br />
         </td>
         <td align="left">
-             <label style="font-weight:bold" > Edad:&nbsp;<br /></label>
-            <asp:TextBox ID="txtEdad" runat="server" Width="79px" ClientIDMode="Static">asdasd</asp:TextBox>
+             <strong>Pu</strong><label ><strong>esto:&nbsp;</strong></label><label style="font-weight:bold" ><br /></label>
+            <asp:TextBox ID="txtPuesto" runat="server" Width="79px" ClientIDMode="Static">asdasd</asp:TextBox>
              <br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
-                   ControlToValidate="txtEdad" ErrorMessage="RequiredFieldValidator" 
+                   ControlToValidate="txtPuesto" ErrorMessage="RequiredFieldValidator" 
                   ForeColor="Red">*</asp:RequiredFieldValidator>
         </td>
     </tr>

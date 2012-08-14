@@ -199,7 +199,7 @@
                 <td style="width: 123px"><%=p.EdoCivil%></td>
                 <td style="width: 75px"><a href="mailto:#"><%=p.Email%></a></td>
                 <th style="font-size: large;width:10px"><h3>  <a href="FrmModificarFamiliar.aspx?idFamiliar=<%=p.Idpersona%>&idParticipante=<%=lblIdParticipante.Text %>"><img src="../Styles/images/editLog.png"/></a></h3></th>
-                <th style="font-size: large;width:10px"><h3><a href="FrmEliminarFamiliar.aspx?idFamiliar=<%=p.Idpersona%>"><img src="../Styles/images/delete.png" /></a></h3></th>
+                <th style="font-size: large;width:10px"><h3><a href="FrmEliminarFamiliar.aspx?idFamiliar=<%=p.Idpersona%>&idParticipante=<%=lblIdParticipante.Text %>"><img src="../Styles/images/delete.png" /></a></h3></th>
                 <td style="visibility:hidden; width: 2px;"><%=p.RutaFoto%></td>
                 <td style="visibility:hidden; width: 2px;"></td>
 			</tr>
