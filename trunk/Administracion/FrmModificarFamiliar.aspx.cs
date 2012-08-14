@@ -25,12 +25,12 @@ public partial class FrmModificarFamiliar : System.Web.UI.Page
 
     protected void btnAgregarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
     }
     protected void btnModificarTel_Click(object sender, EventArgs e)
     {
         listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
     }
     protected void btnQuitarTel_Click(object sender, EventArgs e)
     {
@@ -81,14 +81,14 @@ public partial class FrmModificarFamiliar : System.Web.UI.Page
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         crearListaTelefonos();
-        per = new empatiagamt.Familiar(lblFamiliar.Text, txtNopmbre.Text, txtApellidoPat.Text, txtApellidoMat.Text, txtfecha.Text, edocivil.Value, listaTelefonos, txtEmail.Text, FileUpload2.FileName, slcParentezco.Value, txtEmpresa.Text, txtPuesto.Text, lblIdPersona.Text);
+        per = new empatiagamt.Familiar(lblFamiliar.Text, txtNopmbre.Text.ToUpper(), txtApellidoPat.Text.ToUpper(), txtApellidoMat.Text.ToUpper(), txtfecha.Text, edocivil.Value.ToUpper(), listaTelefonos, txtEmail.Text, FileUpload2.FileName, slcParentezco.Value.ToUpper(), txtEmpresa.Text.ToUpper(), txtPuesto.Text.ToUpper(), lblIdPersona.Text);
         if (per.Modificar())
-            Response.Redirect("~/Administracion/FrmFamiliares.aspx");
+            Response.Redirect("~/Administracion/FrmFamiliares.aspx?idParticipante=" + lblIdPersona.Text);
 
     }
     protected void btnCancelar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Administracion/FrmFamiliares.aspx");
+        Response.Redirect("~/Administracion/FrmFamiliares.aspx?idParticipante=" + lblIdPersona.Text);
     }
 
     private void LlenartextBox()
@@ -105,6 +105,9 @@ public partial class FrmModificarFamiliar : System.Web.UI.Page
                 edocivil.Value= per.DTable.Rows[0][5].ToString();
                 txtEmail.Text = per.DTable.Rows[0][6].ToString();
                 Image1.ImageUrl = per.DTable.Rows[0][7].ToString();
+                slcParentezco.Value = per.DTable.Rows[0][8].ToString();
+                txtEmpresa.Text = per.DTable.Rows[0][9].ToString();
+                txtPuesto.Text = per.DTable.Rows[0][10].ToString();
             }
         }
     }

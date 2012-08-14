@@ -7,7 +7,7 @@
     <tr>
         <td style="height: 62px; width: 238px;" align="left">
             <label style="font-weight:bold" > Nombre (s):<br /></label>
-            <asp:TextBox ID="txtNopmbre" runat="server" Width="195px" ClientIDMode="Static">asdasd</asp:TextBox>
+            <asp:TextBox ID="txtNopmbre" runat="server" Width="195px" ClientIDMode="Static"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                      ControlToValidate="txtNopmbre" ErrorMessage="RequiredFieldValidator" 
                      ForeColor="Red">*</asp:RequiredFieldValidator>
@@ -16,7 +16,7 @@
         <td style="width: 246px; height: 62px;" align="left">
             <label style="font-weight:bold" >   Apellido Paterno:<br /></label>
             <asp:TextBox ID="txtApellidoPat" runat="server" Width="222px" 
-                ClientIDMode="Static">asdasd</asp:TextBox>
+                ClientIDMode="Static"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                      ControlToValidate="txtApellidoPat" ErrorMessage="RequiredFieldValidator" 
                     ForeColor="Red">*</asp:RequiredFieldValidator>
@@ -25,7 +25,7 @@
         <td style="width: 247px; height: 62px;" align="left">
              <label style="font-weight:bold" >  Apellido Materno:<br /></label>
              <asp:TextBox ID="txtApellidoMat" runat="server" Width="212px" 
-                 ClientIDMode="Static">asdasdsad</asp:TextBox>
+                 ClientIDMode="Static"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 
                    ControlToValidate="txtApellidoMat" ErrorMessage="RequiredFieldValidator" 
                   Font-Bold="True" ForeColor="Red">*</asp:RequiredFieldValidator>
@@ -64,7 +64,7 @@
         </td>
         <td style="height: 32px" align="left">
             <div class="rowElem"> <label style="font-weight:bold" >Fecha nacimiento:</label>&nbsp; 
-                <asp:TextBox ID="txtfecha" runat="server" Width="192px" ClientIDMode="Static">1988-02-06</asp:TextBox>
+                <asp:TextBox ID="txtfecha" runat="server" Width="192px" ClientIDMode="Static"></asp:TextBox>
             </div>
         </td>
         <td align="left" rowspan="2">
@@ -121,7 +121,7 @@
     <tr>
         <td style="width: 238px; " align="left">
         <label style="font-weight:bold" >E-mail:&nbsp;<br /></label>
-            <asp:TextBox ID="txtEmail" runat="server" Width="148px" ClientIDMode="Static">asd@sada.dasd</asp:TextBox><br />
+            <asp:TextBox ID="txtEmail" runat="server" Width="148px" ClientIDMode="Static"></asp:TextBox><br />
              <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
                  ControlToValidate="txtEmail" ErrorMessage="Correo no válido" ForeColor="Red" 
                  ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
@@ -129,7 +129,7 @@
         <td style="width: 246px;" align="left">
             <label style="font-weight:bold" > Dirección:&nbsp;<br /></label>
             <asp:TextBox ID="txtDireccion" runat="server" Width="199px" 
-                ClientIDMode="Static">asdads</asp:TextBox>
+                ClientIDMode="Static"></asp:TextBox>
              <br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" 
                    ControlToValidate="txtDireccion" ErrorMessage="RequiredFieldValidator" 
@@ -138,7 +138,7 @@
         </td>
         <td align="left">
              <label style="font-weight:bold" > Edad:&nbsp;<br /></label>
-            <asp:TextBox ID="txtEdad" runat="server" Width="79px" ClientIDMode="Static">asdasd</asp:TextBox>
+            <asp:TextBox ID="txtEdad" runat="server" Width="79px" ClientIDMode="Static"></asp:TextBox>
              <br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
                    ControlToValidate="txtEdad" ErrorMessage="RequiredFieldValidator" 
@@ -171,6 +171,7 @@
                 <th style="font-size: large"><h3>Eliminar</h3></th>
                 <th style="font-size: large"><h3>Historial IMC</h3></th>
                 <th style="font-size: large"><h3>Familiar</h3></th>
+                <th style="font-size: large"><h3>Datos Factura</h3></th>
                 <th style="visibility:hidden; width: 1px;" ><h3>Rutafoto</h3></th>
                 <th style="visibility:hidden; width: 1px;"><h3>Idhistorial</h3></th>
 			</tr>
@@ -200,6 +201,8 @@
                 <th style="font-size: large;width=10px"><h3><a href="FrmEliminarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/delete.png" /></a></h3></th>
                 <th style="font-size: large;width=10px "><h3><a href="FrmDatosMedicos.aspx?idParticipante=<%=p.Idpersona%>&idHistorial=<%=p.IdHistorial%>"><img src="../Styles/images/imcLog.png" /></a></h3></th>
                 <th style="font-size: large; width=10px" ><h3><a href="FrmFamiliares.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/family.png" /></a></h3></th>
+                <th style="font-size: large; width=10px" ><h3><a href="FrmDatosFacturaParticipante.aspx?idParticipante=<%=p.Idpersona%>">
+                    <img src="../Styles/images/factura.png" style="height: 20px; width: 24px" /></a></h3></th>
                 <td style="visibility:hidden; width: 2px;"><%=p.RutaFoto%></td>
                 <td style="visibility:hidden; width: 2px;"><%=p.IdHistorial%></td>
 			</tr>

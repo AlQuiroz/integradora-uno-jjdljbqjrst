@@ -24,12 +24,12 @@ public partial class FrmFamiliares : System.Web.UI.Page
 
     protected void btnAgregarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
     }
     protected void btnModificarTel_Click(object sender, EventArgs e)
     {
         listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
     }
     protected void btnQuitarTel_Click(object sender, EventArgs e)
     {
@@ -93,7 +93,7 @@ public partial class FrmFamiliares : System.Web.UI.Page
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
-        per = new empatiagamt.Familiar("", txtNopmbre.Text, txtApellidoPat.Text, txtApellidoMat.Text, txtfecha.Text, edocivil.Value, crearListaTelefonos(), txtEmail.Text, fUploadFoto.FileName.ToString(),slcParentezco.Value,txtEmpresa.Text,txtPuesto.Text,lblIdParticipante.Text);
+        per = new empatiagamt.Familiar("", txtNopmbre.Text.ToUpper(), txtApellidoPat.Text.ToUpper(), txtApellidoMat.Text.ToUpper(), txtfecha.Text, edocivil.Value.ToUpper(), crearListaTelefonos(), txtEmail.Text, fUploadFoto.FileName.ToString(), slcParentezco.Value.ToUpper(), txtEmpresa.Text.ToUpper(), txtPuesto.Text.ToUpper(), lblIdParticipante.Text);
         per.Agregar();
         mostrarListadoFamiliares();
     }
@@ -115,6 +115,9 @@ public partial class FrmFamiliares : System.Web.UI.Page
             part.EdoCivil = per.DTable.Rows[i][5].ToString();
             part.Email = per.DTable.Rows[i][6].ToString();
             part.RutaFoto = per.DTable.Rows[i][7].ToString();
+            part.Parentezco = per.DTable.Rows[i][8].ToString();
+            part.Empresa = per.DTable.Rows[i][9].ToString();
+            part.Puesto = per.DTable.Rows[i][10].ToString();
             ListadoFamiliares.Add(part);
         }
     }
