@@ -147,8 +147,8 @@
     <td colspan="4">
         <asp:Button ID="btnGuardar" runat="server" onclick="btnGuardar_Click" 
             Text="Guardar cambios" UseSubmitBehavior="False" />
-        <asp:Label ID="lblIdPersona" runat="server" Text="(w.w)"></asp:Label>
-        <asp:Label ID="lblFamiliar" runat="server"></asp:Label>
+        <asp:Label ID="lblIdPersona" runat="server" Text="(w.w)" Visible="False"></asp:Label>
+        <asp:Label ID="lblFamiliar" runat="server" Visible="False"></asp:Label>
         <asp:Button ID="btnCancelar" runat="server" onclick="btnCancelar_Click" 
             Text="Cancelar" />
         </td>

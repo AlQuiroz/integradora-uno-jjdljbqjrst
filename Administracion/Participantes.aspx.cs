@@ -24,7 +24,7 @@ public partial class Participantes : System.Web.UI.Page
 
     protected void btnAgregarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
     }
 
     protected void btnQuitarTel_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ public partial class Participantes : System.Web.UI.Page
     protected void btnModificarTel_Click(object sender, EventArgs e)
     {
         listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
     }
 
     protected void listBoxTelefonos_SelectedIndexChanged(object sender, EventArgs e)
@@ -86,7 +86,7 @@ public partial class Participantes : System.Web.UI.Page
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         //Funciona al 100 :P
-        per = new empatiagamt.Participante("", txtNopmbre.Text, txtApellidoPat.Text, txtApellidoMat.Text, txtfecha.Text, edocivil.Value, crearListaTelefonos(), txtEmail.Text, fUploadFoto.FileName.ToString());
+        per = new empatiagamt.Participante("", txtNopmbre.Text.ToUpper(), txtApellidoPat.Text.ToUpper(), txtApellidoMat.Text.ToUpper(), txtfecha.Text, edocivil.Value.ToUpper(), crearListaTelefonos(), txtEmail.Text, fUploadFoto.FileName.ToString());
         per.Agregar();
         mostrarListadoParticipante();
     }
