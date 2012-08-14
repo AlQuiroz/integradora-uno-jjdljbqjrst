@@ -115,13 +115,11 @@ public partial class Participantes : System.Web.UI.Page
 
     protected void btnCargar_Click(object sender, EventArgs e)
     {
-        string ruta = "~/FotosParticipantes/";
-        string nombreArchivo = fUploadFoto.FileName;
-        //if (System.IO.Path.GetExtension(nombreArchivo) == ".png")
-        //{
-            ruta += nombreArchivo;
-            fUploadFoto.SaveAs(ruta);
-        //}
+        string ruta = "~/Styles/FotosParticipantes/";
+        string nombreArchivo = "holo.png";//fUploadFoto.FileName;
 
+        ruta += nombreArchivo;
+        fUploadFoto.SaveAs(ruta);
+        Image1.ImageUrl = ruta;
     }
 }

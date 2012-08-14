@@ -25,12 +25,12 @@ public partial class FrmModificarFamiliar : System.Web.UI.Page
 
     protected void btnAgregarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "~" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
     }
     protected void btnModificarTel_Click(object sender, EventArgs e)
     {
         listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "~" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text + "/" + "" + txtNumeroTel.Text);
     }
     protected void btnQuitarTel_Click(object sender, EventArgs e)
     {
@@ -40,7 +40,7 @@ public partial class FrmModificarFamiliar : System.Web.UI.Page
     protected void listBoxTelefonos_SelectedIndexChanged(object sender, EventArgs e)
     {
         //LlenarcamposTelefonos();
-        string[] tel = listBoxTelefonos.Items[listBoxTelefonos.SelectedIndex].Value.ToString().Split('~');
+        string[] tel = listBoxTelefonos.Items[listBoxTelefonos.SelectedIndex].Value.ToString().Split('/');
         txtTipoTelefono.Text = tel[0];
         txtNumeroTel.Text = tel[1];
     }
@@ -51,7 +51,7 @@ public partial class FrmModificarFamiliar : System.Web.UI.Page
         empatiagamt.Parametros[] telefono;
         for (int i = 0; i < listBoxTelefonos.Items.Count; i++)
         {
-            string[] datos = listBoxTelefonos.Items[i].ToString().Split('~');
+            string[] datos = listBoxTelefonos.Items[i].ToString().Split('/');
             telefono = new empatiagamt.Parametros[3];
             telefono[0] = new empatiagamt.Parametros("tipo", datos[0].ToString());
             telefono[1] = new empatiagamt.Parametros("numero", datos[1].ToString());
@@ -71,7 +71,7 @@ public partial class FrmModificarFamiliar : System.Web.UI.Page
         {
             for (int i = 0; i < tel.DTable.Rows.Count; i++)
             {
-                listBoxTelefonos.Items.Add(tel.DTable.Rows[i][2].ToString().Trim() + "" + tel.DTable.Rows[i][3].ToString().Trim());
+                listBoxTelefonos.Items.Add(tel.DTable.Rows[i][2].ToString().Trim() + "/" + tel.DTable.Rows[i][3].ToString().Trim());
             }
         }
     }
@@ -81,7 +81,7 @@ public partial class FrmModificarFamiliar : System.Web.UI.Page
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         crearListaTelefonos();
-        per = new empatiagamt.Familiar(lblFamiliar.Text, txtNopmbre.Text, txtApellidoPat.Text, txtApellidoMat.Text, txtfecha.Text, edocivil.Value, listaTelefonos, txtEmail.Text, FileUpload2.FileName, "parentexco", "empresa", "puesto", lblIdPersona.Text);
+        per = new empatiagamt.Familiar(lblFamiliar.Text, txtNopmbre.Text, txtApellidoPat.Text, txtApellidoMat.Text, txtfecha.Text, edocivil.Value, listaTelefonos, txtEmail.Text, FileUpload2.FileName, slcParentezco.Value, txtEmpresa.Text, txtPuesto.Text, lblIdPersona.Text);
         if (per.Modificar())
             Response.Redirect("~/Administracion/FrmFamiliares.aspx");
 

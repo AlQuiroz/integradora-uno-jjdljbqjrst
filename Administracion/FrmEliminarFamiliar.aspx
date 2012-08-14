@@ -93,7 +93,8 @@ Se recomienda no eliminar información de esta indole para fururas referencias</
             Text="Eliminar" UseSubmitBehavior="False" onclick="btnEliminar_Click" />
         <asp:Button ID="btnCancelar" runat="server" 
             Text="Cancelar" UseSubmitBehavior="False" onclick="btnCancelar_Click" />
-        <asp:Label ID="lblIdPersona" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="lblIdPersona" runat="server"></asp:Label>
+        <asp:Label ID="lblFamiliar" runat="server"></asp:Label>
         </td>
     </tr>
     </table>
