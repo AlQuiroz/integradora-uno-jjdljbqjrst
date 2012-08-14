@@ -44,11 +44,22 @@ namespace empatiagamt
 
         public override bool Eliminar()
         {
-            return base.Eliminar();
+            if (base.Eliminar())
+            {
+
+                return true;
+            }
+            else return false;
         }
+
+
         public override bool Modificar()
         {
-            return base.Modificar();
+            if (base.Modificar())
+            {
+                return true;
+            }
+            else return false;
         }
 
         public override bool Mostrar()
@@ -67,6 +78,7 @@ namespace empatiagamt
                     f.RFC = DTable.Rows[i][2].ToString();
                     f.Direccion = DTable.Rows[i][3].ToString();
                     f.Telefono = DTable.Rows[i][4].ToString();
+                    f.IdFactura = DTable.Rows[i][5].ToString();
                     ListaFacturas.Add(f); //llena una lista de facturas...
                 }
                 return true;
