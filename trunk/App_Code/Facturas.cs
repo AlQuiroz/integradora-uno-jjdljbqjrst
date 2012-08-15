@@ -88,13 +88,22 @@ namespace empatiagamt
             return EjecutarStore(param, "datosfacturacionModificar");
         }
 
+
         public override bool Mostrar()
         {
-            if (LeerTabla("datosFacturacionConsultar"))
+            param = new Parametros[1];
+            param[0] = new Parametros("", "");
+
+            if (LeerTabla("datosFacturacionConsultar",param))
             {
                 return true;
             }
             else  { return false; }
         }
+
+        public virtual bool BuscarPorID() {
+            return false;
+        }
+
     }
 }
