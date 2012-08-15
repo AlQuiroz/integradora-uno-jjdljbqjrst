@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="FrmFamiliares.aspx.cs" Inherits="FrmFamiliares"  MaintainScrollPositionOnPostback="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-<form id="001" action="Historial_Medico_Participante.aspx">
+<form id="001" action="Historial_Medico_Participante.aspx"style="border-style:none">
     <fieldset style="border-style:none">
 <table style="width: 1007px; height: 266px; ">
     <tr>
@@ -154,7 +154,7 @@
         <asp:Button ID="btnGuardar" runat="server" onclick="btnGuardar_Click" 
             Text="Guardar" UseSubmitBehavior="False" />
         <asp:Button ID="btnTerminar" runat="server" onclick="btnTerminar_Click" 
-            Text="Terminar" />
+            Text="Terminar" CausesValidation="False" UseSubmitBehavior="False" />
         </td>
     </tr>
     </table>
