@@ -6,7 +6,9 @@ body
     background-color: #3c7aae;
 }
 
-p{margin:0px;padding:0px;}
+p{margin:0px;padding:0px;
+    font-weight: 700;
+}
 
 .flt{float:left;border:0;}
 
@@ -367,7 +369,9 @@ a.more { font-size:10px; background:url(images/more.gif) no-repeat 0 center; pad
 .footer-logo { float:left; width:169px; height:34px; background:url(images/footer-logo.gif);} 
 
 
-body {font:10px Verdana,Arial; margin:25px; color:#091f30}
+body {font:normal normal 700 10px normal Verdana, Arial; 
+margin:25px; color:#091f30
+}
 
 .sortable {width:980px; border-left:1px solid #c6d5e1; border-top:1px solid #c6d5e1; border-bottom:none; margin:0 auto 15px}
 .sortable th {background:url(images/header-bg.gif); text-align:left; color:#cfdce7; border:1px solid #fff; border-right:none}
