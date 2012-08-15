@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="Participantes.aspx.cs" Inherits="Participantes" MaintainScrollPositionOnPostback="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <form id="001" action="Historial_Medico_Participante.aspx">
-    <fieldset>
+    <form id="001" action="Historial_Medico_Participante.aspx" style="border-bottom-style:none">
+    <fieldset style="border-left-style:none">
 <table style="width: 1007px; height: 266px; ">
     <tr>
         <td style="height: 62px; width: 238px;" align="left">
@@ -154,7 +154,7 @@
     </table>
     </fieldset>
 
-    <fieldset id="TablaPrticipantes">
+    <fieldset id="TablaPrticipantes" style="border-left-style:none">
     
 <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
 		<thead>

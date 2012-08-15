@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="FrmModificarParticipante.aspx.cs" Inherits="FrmModificarParticipante" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<form id="modificarParticipante">
-<fieldset>
+<form id="modificarParticipante" style="border-style:none">
+<fieldset style="border-style:none">
 <table style="width: 1007px; height: 266px; ">
     <tr>
         <td style="height: 62px; width: 238px;" align="left">

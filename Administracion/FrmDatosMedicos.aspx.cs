@@ -75,19 +75,24 @@ public partial class FrmDatosMedicos : System.Web.UI.Page
 
     private bool validarNumeroDecimal(string numero) {
         int contPuntos = 0;
-        for (int i = 0; i < numero.Length; i++) {
-
-            if (char.IsNumber(numero[i])) { }
-            else
+        if (numero.Length > 0)
+        {
+            for (int i = 0; i < numero.Length; i++)
             {
-                if (numero[i] == '.')
+
+                if (char.IsNumber(numero[i])) { }
+                else
                 {
-                    contPuntos++;
+                    if (numero[i] == '.')
+                    {
+                        contPuntos++;
+                    }
+                    else { return false; }
+                    if (contPuntos > 1) return false;
                 }
-                else { return false; }
-                if (contPuntos > 1) return false;
             }
+            return true;
         }
-        return true;
+        return false;
     }
 }
