@@ -20,7 +20,7 @@ public partial class FrmDatosFacturaParticipante : System.Web.UI.Page
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
-        fact = new empatiagamt.FactutaParticipante("", txtNombre.Text.ToUpper(), txtDireccion.Text.ToUpper(), txtTelefono.Text.ToUpper(), txtRFC.Text.ToUpper(),lblIdParticipante.Text);
+        fact = new empatiagamt.FactutaParticipante("", txtNombre.Text.ToUpper(),txtRFC.Text.ToUpper(), txtDireccion.Text.ToUpper(), txtTelefono.Text.ToUpper(), lblIdParticipante.Text);
         fact.Agregar();
         fact.Mostrar();
     }

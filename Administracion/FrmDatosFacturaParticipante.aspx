@@ -56,7 +56,7 @@
 <fieldset id="tabla" style="border-style:none">
 
 
- <fieldset id="TablaPrticipantes">
+ <fieldset id="TablaPrticipantes" style="border-left-style:none">
     
 <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
 		<thead>
@@ -69,7 +69,6 @@
                 <th style="font-size: large; width: 121px;"><h3>Teléfono</h3></th>
                 <th style="font-size: large; width: 20px;"><h3>Modificar</h3></th>
                 <th style="font-size: large; width: 20px;"><h3>Borrar</h3></th>
-                <th style="font-size: large; width: 1px; visibility:hidden"><h3>Factura</h3></th>
 
 			</tr>
 		</thead>
@@ -93,8 +92,8 @@
 				<td style="width: 121px"><%=f.Direccion%></td>
 				<td style="width: 95px"><%=f.Telefono%></td>
                 <td style="width: 20px"><a href="FrmModificarFacturaParticipante.aspx?idfactura=<%=f.IdFactura%>&idParticipante=<%=lblIdParticipante.Text %>"><img  src="../Styles/images/editLog.png"/></a></td>
-				<td style="width: 20px"><a href="?idfactura=<%=f.IdFactura%>&idParticipante=<%=lblIdParticipante.Text %>"><img src="../Styles/images/delete.png" /></a></td>
-                <td style="width: 95px;visibility:visible"><%=f.IdFactura%></td>
+				<td style="width: 20px"><a href="FrmEliminarFacturasParticipante.aspx?idfactura=<%=f.IdFactura%>&idParticipante=<%=lblIdParticipante.Text %>"><img src="../Styles/images/delete.png" /></a></td>
+                
 			</tr>
 
             <% }
