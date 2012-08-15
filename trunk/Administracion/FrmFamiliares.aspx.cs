@@ -124,6 +124,7 @@ public partial class FrmFamiliares : System.Web.UI.Page
 
     protected void btnTerminar_Click(object sender, EventArgs e)
     {
+            
         Response.Redirect("~/Administracion/Participantes.aspx");
     }
 }
