@@ -44,10 +44,12 @@ namespace empatiagamt
 
         public override bool Eliminar()
         {
-            if (base.Eliminar())
-            {
+            para = new Parametros[1];
+            para[0] = new Parametros("idFactPart", IdFactura);
 
-                return true;
+            if (EjecutarStore(para, "facturacionparticipanteBorrar")) //se elimina la tabla generada por la relacion * * entre facturas y participante
+            {
+                return base.Eliminar();
             }
             else return false;
         }
@@ -78,7 +80,6 @@ namespace empatiagamt
                     f.RFC = DTable.Rows[i][2].ToString();
                     f.Direccion = DTable.Rows[i][3].ToString();
                     f.Telefono = DTable.Rows[i][4].ToString();
-                    //f.IdFactura = DTable.Rows[i][5].ToString();
                     ListaFacturas.Add(f); //llena una lista de facturas...
                 }
                 return true;
