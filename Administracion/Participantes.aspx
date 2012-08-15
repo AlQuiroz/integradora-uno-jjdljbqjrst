@@ -197,11 +197,11 @@
 				<td style="width: 95px"><%=p.FNac%></td>
                 <td style="width: 123px"><%=p.EdoCivil%></td>
                 <td style="width: 75px"><a href="mailto:#"><%=p.Email%></a></td>
-                <th style="font-size: large;width=10px"><h3>  <a href="FrmModificarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/editLog.png"/></a></h3></th>
-                <th style="font-size: large;width=10px"><h3><a href="FrmEliminarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/delete.png" /></a></h3></th>
-                <th style="font-size: large;width=10px "><h3><a href="FrmDatosMedicos.aspx?idParticipante=<%=p.Idpersona%>&idHistorial=<%=p.IdHistorial%>"><img src="../Styles/images/imcLog.png" /></a></h3></th>
-                <th style="font-size: large; width=10px" ><h3><a href="FrmFamiliares.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/family.png" /></a></h3></th>
-                <th style="font-size: large; width=10px" ><h3><a href="FrmDatosFacturaParticipante.aspx?idParticipante=<%=p.Idpersona%>">
+                <th style="font-size: large;width:10px"><h3>  <a href="FrmModificarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/editLog.png"/></a></h3></th>
+                <th style="font-size: large;width:10px"><h3><a href="FrmEliminarParticipante.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/delete.png" /></a></h3></th>
+                <th style="font-size: large;width:10px "><h3><a href="FrmDatosMedicos.aspx?idParticipante=<%=p.Idpersona%>&idHistorial=<%=p.IdHistorial%>"><img src="../Styles/images/imcLog.png" /></a></h3></th>
+                <th style="font-size: large; width:10px" ><h3><a href="FrmFamiliares.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/family.png" /></a></h3></th>
+                <th style="font-size: large; width:10px" ><h3><a href="FrmDatosFacturaParticipante.aspx?idParticipante=<%=p.Idpersona%>">
                     <img src="../Styles/images/factura.png" style="height: 20px; width: 24px" /></a></h3></th>
                 <td style="visibility:hidden; width: 2px;"><%=p.RutaFoto%></td>
                 <td style="visibility:hidden; width: 2px;"><%=p.IdHistorial%></td>

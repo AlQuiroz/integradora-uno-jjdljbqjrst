@@ -14,39 +14,32 @@ public partial class FrmModificarFacturaParticipante : System.Web.UI.Page
         if (Page.IsPostBack == false) {
             lblIdParticipante.Text = Request.QueryString["idParticipante"].ToString();
             lblIdFactura.Text = Request.QueryString["idfactura"].ToString();
-
+            LlenartextBox();
         }
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
+        fact = new empatiagamt.FactutaParticipante(lblIdFactura.Text, txtNombre.Text, txtRFC.Text, txtDireccion.Text, txtTelefono.Text, lblIdParticipante.Text);
+        fact.Modificar();
 
     }
     protected void btnTerminar_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("~/Administracion/FrmDatosFacturaParticipante.aspx?idParticipante="+lblIdParticipante.Text);
     }
 
     private void LlenartextBox()
     {
+        //busca una factura especifica
         fact = new empatiagamt.FactutaParticipante(lblIdParticipante.Text);
-        
-        
-        //if (per.BuscarPersona(int.Parse(lblIdPersona.Text)))
-        //{
-        //    if (per.DTable.Rows.Count != 0)
-        //    {
-        //        txtNopmbre.Text = per.DTable.Rows[0][1].ToString();
-        //        txtApellidoPat.Text = per.DTable.Rows[0][2].ToString();
-        //        txtApellidoMat.Text = per.DTable.Rows[0][3].ToString();
-        //        txtfecha.Text = "" + Convert.ToDateTime(per.DTable.Rows[0][4].ToString()).ToString("yyyy-MM-dd)");
-        //        edocivil.Value = per.DTable.Rows[0][5].ToString();
-        //        txtEmail.Text = per.DTable.Rows[0][6].ToString();
-        //        Image1.ImageUrl = per.DTable.Rows[0][7].ToString();
-        //        slcParentezco.Value = per.DTable.Rows[0][8].ToString();
-        //        txtEmpresa.Text = per.DTable.Rows[0][9].ToString();
-        //        txtPuesto.Text = per.DTable.Rows[0][10].ToString();
-        //    }
-        //}
+        fact.IdFactura = lblIdFactura.Text;
+        if (fact.BuscarPorID()) {
+            txtNombre.Text = fact.ListaFacturas[0].RazonSocial;
+            txtRFC.Text = fact.ListaFacturas[0].RFC;
+            txtDireccion.Text = fact.ListaFacturas[0].Direccion;
+            txtTelefono.Text = fact.ListaFacturas[0].Telefono;
+        }
+
     }
 
 }

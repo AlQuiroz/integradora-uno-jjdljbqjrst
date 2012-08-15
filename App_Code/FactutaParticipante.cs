@@ -78,7 +78,7 @@ namespace empatiagamt
                     f.RFC = DTable.Rows[i][2].ToString();
                     f.Direccion = DTable.Rows[i][3].ToString();
                     f.Telefono = DTable.Rows[i][4].ToString();
-                    f.IdFactura = DTable.Rows[i][5].ToString();
+                    //f.IdFactura = DTable.Rows[i][5].ToString();
                     ListaFacturas.Add(f); //llena una lista de facturas...
                 }
                 return true;
@@ -86,6 +86,39 @@ namespace empatiagamt
             else
                 return false;
         }
+
+        /// <summary>
+        /// busca una factura por su id 
+        /// </summary>
+        /// <returns></returns>
+        public override bool BuscarPorID()
+        {
+            List<Facturas> lista = new List<Facturas>();
+            para = new Parametros[1];
+            para[0] = new Parametros("idFact", IdFactura);
+            if (LeerTabla("datosFacturacionConsultarId", para))
+            {
+                if (DTable.Rows.Count == 1)
+                {
+                    empatiagamt.Facturas f;
+                    for (int i = 0; i < DTable.Rows.Count; i++)
+                    {
+                        f = new empatiagamt.FactutaParticipante(Idpart);
+                        f.IdFactura = DTable.Rows[i][0].ToString();
+                        f.RazonSocial = DTable.Rows[i][1].ToString();
+                        f.RFC = DTable.Rows[i][2].ToString();
+                        f.Direccion = DTable.Rows[i][3].ToString();
+                        f.Telefono = DTable.Rows[i][4].ToString();
+                        lista.Add(f);
+                    }
+                    ListaFacturas = lista;
+                    return true;
+                }
+                return false;
+            }
+            return false;
+        }
+
     }
 
 }
