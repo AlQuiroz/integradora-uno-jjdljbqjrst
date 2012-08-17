@@ -36,7 +36,8 @@ Se recomienda no eliminar información de esta indole para fururas referencias</
              Apellido Materno</label><label style="font-weight:bold" >:<br /></label>
         </td>
         <td style="height: 62px" align="left" rowspan="3">
-            <div><asp:Image ID="Image1" runat="server" Height="113px" Width="275px" 
+            <div>
+                <asp:Image ID="Image1" runat="server" Height="113px" Width="275px" 
                     ClientIDMode="Static" ImageUrl="~/images/logotipo.png" 
                     ImageAlign="Middle" /></div>
         </td>

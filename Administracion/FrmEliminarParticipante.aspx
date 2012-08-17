@@ -34,7 +34,8 @@
              <span class="style2">Apellido</span> <span class="style2">Materno</span>:<br /></label>
         </td>
         <td style="height: 62px" align="left" rowspan="3">
-            <div><b><asp:Image ID="Image1" runat="server" Height="113px" Width="275px" 
+            <div><b>
+                <asp:Image ID="Image1" runat="server" Height="113px" Width="275px" 
                     ClientIDMode="Static" ImageUrl="~/images/logotipo.png" 
                     ImageAlign="Middle" /></b></div>
         </td>
