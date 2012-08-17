@@ -262,7 +262,7 @@ hr {
 * { padding:0; margin:0; outline:0; }
 
 input, textarea, select { font-family: Arial, sans-serif; font-size:12px;
-    height: 25px;
+    text-align: left;
 }
 
 .notext { font-size:0; line-height:0; text-indent: -4000px; display:block; }
