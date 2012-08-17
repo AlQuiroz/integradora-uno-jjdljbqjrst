@@ -13,6 +13,16 @@ public partial class Escuelas : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Request.QueryString["idDatos"] != null)
+        {
+            lblIdDatos.Text = Request.QueryString["idDatos"].ToString();
+        }
+        if (Request.QueryString["Frm"] != null)
+        {
+            lblFrm.Text = Request.QueryString["Frm"].ToString();
+        }
+        
+        
         if (Request.QueryString["Accion"] == "Eliminar") 
         {
             if (Request.QueryString["Elemento"] != null)
@@ -20,7 +30,7 @@ public partial class Escuelas : System.Web.UI.Page
                 elemento = Convert.ToInt32(Request.QueryString["Elemento"]);
                 escu = new Escuela(elemento);
                 escu.Eliminar();
-                Response.Redirect("FormularioEscuelas.aspx");
+                Response.Redirect("FormularioEscuelas.aspx?Frm=" + lblFrm.Text + "&idDatos=" + lblIdDatos.Text);
             }
         }
         else if (Request.QueryString["Accion"] == "Modificar")
@@ -57,8 +67,8 @@ public partial class Escuelas : System.Web.UI.Page
         try
         {
             escu = new Escuela(txtnom.Text.ToString(), txtdire.Text.ToString(), txttele.Text.ToString());
-            if(escu.Agregar())
-                Response.Redirect("FormularioEscuelas.aspx");
+            if (escu.Agregar())
+                Response.Redirect("FormularioEscuelas.aspx?Frm=" + lblFrm.Text + "&idDatos=" + lblIdDatos.Text);
         }
         catch 
         {
@@ -71,7 +81,7 @@ public partial class Escuelas : System.Web.UI.Page
         {
             escu = new Escuela(int.Parse(txtid.Value.ToString()), txtnom.Text.ToString(), txtdire.Text.ToString(), txttele.Text.ToString());
             if(escu.Modificar())
-                Response.Redirect("FormularioEscuelas.aspx");
+                Response.Redirect("FormularioEscuelas.aspx?Frm=" + lblFrm.Text + "&idDatos=" + lblIdDatos.Text);
         }
         catch
         {
@@ -80,6 +90,6 @@ public partial class Escuelas : System.Web.UI.Page
     }
     protected void txtretur_Click(object sender, EventArgs e)
     {
-        Response.Redirect("FormularioEscuelas.aspx");
+        Response.Redirect("FormularioEscuelas.aspx?Frm=" + lblFrm.Text + "&idDatos=" + lblIdDatos.Text);
     }
 }
