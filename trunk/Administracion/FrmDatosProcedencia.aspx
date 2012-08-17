@@ -81,9 +81,9 @@
             empatiagamt.DatosPocedencia dp;
             try
             {
-                for (int i = 0; i < dproc.ListaDatosProcedencia.Count; i++)
+                for (int i = 0; i < ListaDatosProcedencia.Count; i++)
                 {
-                    dp = (empatiagamt.DatosPocedencia)dproc.ListaDatosProcedencia[i];
+                    dp = (empatiagamt.DatosPocedencia)ListaDatosProcedencia[i];
               
               %>
             <tr>

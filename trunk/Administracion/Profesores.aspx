@@ -186,9 +186,9 @@
             empatiagamt.Instructor instructor;
             try
             {
-                for (int i = 0; i < ins.ListaInstructor.Count; i++)
+                for (int i = 0; i < ListadoInstructor.Count; i++)
                 {
-                    instructor = (empatiagamt.Instructor)ins.ListaInstructor[i];
+                    instructor = (empatiagamt.Instructor)ListadoInstructor[i];
               
               %>
             <tr>

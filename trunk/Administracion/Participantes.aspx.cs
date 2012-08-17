@@ -85,7 +85,6 @@ public partial class Participantes : System.Web.UI.Page
 
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
-        //Funciona al 100 :P
         per = new empatiagamt.Participante("", txtNopmbre.Text.ToUpper(), txtApellidoPat.Text.ToUpper(), txtApellidoMat.Text.ToUpper(), txtfecha.Text, edocivil.Value.ToUpper(), crearListaTelefonos(), txtEmail.Text, fUploadFoto.FileName.ToString());
         per.Agregar();
         mostrarListadoParticipante();

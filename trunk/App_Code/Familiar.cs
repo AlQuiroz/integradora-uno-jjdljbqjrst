@@ -101,7 +101,11 @@ namespace empatiagamt
         }
         public override bool Mostrar()
         {
-            return LeerTabla("FamiliarConsultar");
+
+            if (LeerTabla("FamiliarConsultar"))
+                return true;
+            return false;
+            
         }
         /// <summary>
         /// retorna los familiares del participante seleccionado, segun la clave del participante

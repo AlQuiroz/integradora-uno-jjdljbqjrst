@@ -11,7 +11,7 @@ public partial class FrmFamiliares : System.Web.UI.Page
 
     private empatiagamt.Persona per;
     private List<empatiagamt.Parametros[]> listaTelefonos;
-    public ArrayList ListadoFamiliares = new ArrayList();
+    public List<empatiagamt.Familiar> ListadoFamiliares = new List<empatiagamt.Familiar>();
     protected void Page_Load(object sender, EventArgs e)
     {
         //mostrarListadoFamiliares();

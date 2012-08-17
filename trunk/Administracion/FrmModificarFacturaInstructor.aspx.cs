@@ -26,7 +26,7 @@ public partial class FrmModificarFacturaInstructor : System.Web.UI.Page
     }
     protected void btnTerminar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Administracion/FrmDatosFacturaidInstructor.aspx?idInstructor=" + lblIdParticipante.Text);
+        Response.Redirect("~/Administracion/FrmDatosFacturaInstructor.aspx?idInstructor=" + lblIdParticipante.Text);
     }
 
     private void LlenartextBox()
