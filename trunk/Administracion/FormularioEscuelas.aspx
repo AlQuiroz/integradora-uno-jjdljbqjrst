@@ -10,6 +10,9 @@
 <center>
     <asp:Button ID="btnnueva" runat="server" Text="Agregar Escuela Nueva" 
         onclick="btnnueva_Click" />
+    <asp:Label ID="lblFrmOrigen" runat="server" Text="FrmOrigen"></asp:Label>
+    <asp:Label ID="lblIdParticipante" runat="server"></asp:Label>
+    <asp:Label ID="lblIdDatos" runat="server"></asp:Label>
     <br />
     <br />
 <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
@@ -19,12 +22,13 @@
 				<th><h3>Nombre Escuela</h3></th>
 				<th><h3>Direccion</h3></th>
 				<th><h3>Telefono</h3></th>
-				<th><h3>Zip</h3></th>
-				<th><h3>Birthdate</h3></th>
+				<th><h3>Eliminar</h3></th>
+				<th><h3>Modificar</h3></th>
+                <th><h3>Seleccionar</h3></th>
 			</tr>
 		</thead>
 		<tbody>
-        <%for (int i = 0; i < Le.Count; i++)
+            <%for (int i = 0; i < Le.Count; i++)
           {%>
 			<tr>
 				<td><%=Le[i].Idescuela.ToString()%></td>
@@ -33,6 +37,7 @@
                 <td><%=Le[i].Telefono.ToString()%></td>
 				<td><a href="AgregarEscuelas.aspx?Accion=Eliminar&Elemento=<%=Le[i].Idescuela.ToString()%> ">Eliminar</a></td>
                 <td><a href="AgregarEscuelas.aspx?Accion=Modificar&Elemento=<%=Le[i].Idescuela.ToString()%> ">Modificar</a></td>  
+                <td><a href="<%=lblFrmOrigen.Text %>?idEscuela=<%=Le[i].Idescuela.ToString()%>&idParticipante=<%=lblIdParticipante.Text %>&idDatos=<%=lblIdDatos.Text %> ">Seleccionar</a></td>  
 			</tr>
             <%} %>
 		</tbody>

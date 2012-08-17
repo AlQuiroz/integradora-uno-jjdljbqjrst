@@ -19,9 +19,15 @@ public partial class FormularioEscuelas : System.Web.UI.Page
         {
             Le = esc.ListEscuela;
         }
+
+        if (Page.IsPostBack==false) {
+            if (Request.QueryString["Frm"] != null) { lblFrmOrigen.Text = Request.QueryString["Frm"].ToString(); }
+            if (Request.QueryString["idDatos"] != null) { lblIdDatos.Text = Request.QueryString["idDatos"].ToString(); }
+        }
+
     }
     protected void btnnueva_Click(object sender, EventArgs e)
     {
-        Response.Redirect("AgregarEscuelas.aspx");
+        Response.Redirect("AgregarEscuelas.aspx?Frm=" + lblFrmOrigen.Text+"&idDatos="+lblIdDatos.Text); //envío idparticipante
     }
 }

@@ -96,6 +96,7 @@ public partial class Participantes : System.Web.UI.Page
         per = new empatiagamt.Participante();
         per.Mostrar(); // debe regresar un arrayList de personas.
         empatiagamt.Participante part;
+        ListadoParticipantes.Clear();
         for (int i = 0; i < per.DTable.Rows.Count; i++)
         {
             part = new empatiagamt.Participante();
@@ -115,11 +116,17 @@ public partial class Participantes : System.Web.UI.Page
 
     protected void btnCargar_Click(object sender, EventArgs e)
     {
-        string ruta = "~/Styles/FotosParticipantes/";
-        string nombreArchivo = "holo.png";//fUploadFoto.FileName;
+        try {
 
-        ruta += nombreArchivo;
-        fUploadFoto.SaveAs(ruta);
-        Image1.ImageUrl = ruta;
+            Session["foto"] = fUploadFoto.FileName;
+
+            if (fUploadFoto.HasFile) {
+
+                fUploadFoto.SaveAs(MapPath("~/Styles/FotosParticipantes/prueba.png"));
+            }
+            
+            
+        }
+        catch { }
     }
 }

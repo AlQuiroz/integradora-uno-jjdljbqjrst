@@ -39,7 +39,7 @@
             <asp:FileUpload ID="fUploadFoto" runat="server" ClientIDMode="Static" />
             <br />
             <asp:Button ID="btnCargar" runat="server" onclick="btnCargar_Click" 
-                Text="Cargar" UseSubmitBehavior="False" />
+                Text="Cargar" UseSubmitBehavior="False" CausesValidation="False" />
         </td>
     </tr>
     <tr>
@@ -102,17 +102,17 @@
                     <td>
                         <asp:Button ID="btnAgregarTel" runat="server" Text="Agregar" 
                             ClientIDMode="Static" onclick="btnAgregarTel_Click" 
-                            UseSubmitBehavior="False" />
+                            UseSubmitBehavior="False" CausesValidation="False" />
                     </td>
                     <td>
                         <asp:Button ID="btnModificarTel" runat="server" Text="Modifiar" 
                             ClientIDMode="Static" UseSubmitBehavior="False" 
-                            onclick="btnModificarTel_Click" />
+                            onclick="btnModificarTel_Click" CausesValidation="False" />
                     </td>
                     <td>
                         <asp:Button ID="btnQuitarTel" runat="server" Text="Quitar" 
                             ClientIDMode="Static" UseSubmitBehavior="False" 
-                            onclick="btnQuitarTel_Click" />
+                            onclick="btnQuitarTel_Click" CausesValidation="False" />
                     </td>
                 </tr>
             </table>
@@ -172,6 +172,7 @@
                 <th style="font-size: large"><h3>Historial IMC</h3></th>
                 <th style="font-size: large"><h3>Familiar</h3></th>
                 <th style="font-size: large"><h3>Datos Factura</h3></th>
+                <th style="font-size: large"><h3>Antecedentes escolares</h3></th>
                 <th style="visibility:hidden; width: 1px;" ><h3>Rutafoto</h3></th>
                 <th style="visibility:hidden; width: 1px;"><h3>Idhistorial</h3></th>
 			</tr>
@@ -203,6 +204,8 @@
                 <th style="font-size: large; width:10px" ><h3><a href="FrmFamiliares.aspx?idParticipante=<%=p.Idpersona%>"><img src="../Styles/images/family.png" /></a></h3></th>
                 <th style="font-size: large; width:10px" ><h3><a href="FrmDatosFacturaParticipante.aspx?idParticipante=<%=p.Idpersona%>">
                     <img src="../Styles/images/factura.png" style="height: 20px; width: 24px" /></a></h3></th>
+                <th style="font-size: large; width:10px" ><h3><a href="FrmDatosProcedencia.aspx?idParticipante=<%=p.Idpersona%>">
+                    <img src="../Styles/images/schoolLog.png" style="height: 20px; width: 24px" /></a></h3></th>
                 <td style="visibility:hidden; width: 2px;"><%=p.RutaFoto%></td>
                 <td style="visibility:hidden; width: 2px;"><%=p.IdHistorial%></td>
 			</tr>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="FrmDatosFacturaParticipante.aspx.cs" Inherits="FrmDatosFacturaParticipante" MaintainScrollPositionOnPostback="true"%>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="~/Administracion/FrmDatosFacturaParticipante.aspx.cs" Inherits="FrmDatosFacturaParticipante" MaintainScrollPositionOnPostback="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <form id="datosFacturacion"method="post" action="FrmDatosFacturaParticipante.aspx">
 

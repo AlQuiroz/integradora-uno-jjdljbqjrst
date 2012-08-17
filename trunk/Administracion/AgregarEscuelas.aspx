@@ -5,8 +5,10 @@
     <asp:HiddenField ID="txtid" runat="server" />
 Nombre escuela : 
     <asp:TextBox ID="txtnom" runat="server"></asp:TextBox>
+        <asp:Label ID="lblFrm" runat="server"></asp:Label>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
             ControlToValidate="txtnom" ErrorMessage="Nombre Obligatorio"></asp:RequiredFieldValidator>
+        <asp:Label ID="lblIdDatos" runat="server"></asp:Label>
         <br />
         <br />
 Dirección :
