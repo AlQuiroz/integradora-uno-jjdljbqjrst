@@ -18,9 +18,12 @@
         ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.pdf)$"></asp:RegularExpressionValidator>
     <br />
     <asp:Button ID="btnGuardar" runat="server" onclick="Button1_Click" 
-        Text="Guardar" />
+        Text="Guardar" UseSubmitBehavior="False" />
+        <asp:Button ID="btnTerminar" runat="server" Text="Terminar" 
+            onclick="btnTerminar_Click" />
+        <asp:Label ID="idInstructor" runat="server"></asp:Label>
     <br />
-    archivos en formato .PDF preferiblemente optimisado para web.<br />
+    archivos en formato .PDF preferiblemente optimizado para web.<br />
 &nbsp;
     </div>
 </center>

@@ -56,14 +56,15 @@ namespace empatiagamt
 
         public override bool Modificar()
         {
-            if (base.Modificar()){
-                return true;
-            }
-            else if (RutaCurriculum != ""){
-                param = new Parametros[2];
+            if (RutaCurriculum != "")
+            {
+                param = new Parametros[1];
                 param[0] = new Parametros("idPers", "" + Idpersona);
-                param[2] = new Parametros("Curr", RutaCurriculum);
                 return EjecutarStore(param, "instructorModificar");
+            }
+
+            else if (base.Modificar()){
+                return true;
             }
             return false;
         }
