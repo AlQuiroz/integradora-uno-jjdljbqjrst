@@ -8,19 +8,20 @@ using System.IO;
 
 public partial class PDF_PdfUploader : System.Web.UI.Page
 {
-    private int idprofesor;
+    empatiagamt.Instructor inst;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.QueryString["id"] != null)
+        if (Request.QueryString["idInstructor"] != null)
         {
-            idprofesor = Convert.ToInt32(Request.QueryString["id"]);
+            idInstructor.Text = Request.QueryString["idInstructor"].ToString();
 
-            if (File.Exists(Server.MapPath("~/Administracion/PDF/Archvos/" + idprofesor + ".pdf")))
+            if (File.Exists(Server.MapPath("~/Administracion/PDF/Archvos/" + idInstructor + ".pdf")))
             {
-                Response.Redirect("PdfVer.aspx?doc=" + idprofesor);
+                Response.Redirect("PdfVer.aspx?doc=" + idInstructor);
             }
         }
-        else 
+        else
         {
             //Response.Redirect("../../inicio.aspx");
         }
@@ -35,8 +36,11 @@ public partial class PDF_PdfUploader : System.Web.UI.Page
                 Label1.Text = fileupload.PostedFile.ContentType.ToString();
                 if (fileupload.PostedFile.ContentType=="application/pdf")//validar .PFD
                 {
-                    fileupload.SaveAs(MapPath("~/Administracion/PDF/Archvos/" + idprofesor + ".pdf"));
-                    Response.Redirect("PdfVer.aspx?doc=" + idprofesor);
+                    fileupload.SaveAs(MapPath("~/Administracion/PDF/Archvos/" + idInstructor + ".pdf"));
+                    inst = new empatiagamt.Instructor();
+                    inst.RutaCurriculum = idInstructor.Text;
+                    inst.Modificar(); //actualiza el nombre de curriculum
+                    Response.Redirect("PdfVer.aspx?doc=" + idInstructor);
                 }
             }
         }
@@ -44,5 +48,9 @@ public partial class PDF_PdfUploader : System.Web.UI.Page
         {
             Label1.Text = "Error: " + ex.ToString();
         }
+    }
+    protected void btnTerminar_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("../Profesores.aspx");
     }
 }

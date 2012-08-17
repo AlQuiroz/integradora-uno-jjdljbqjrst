@@ -193,7 +193,7 @@
                 <th style="font-size: large; width:10px" ><h3><a href="FrmDatosFacturaInstructor.aspx?idInstructor=<%=instructor.Idpersona %>">
                     <img src="../Styles/images/factura.png" style="height: 20px; width: 24px" /></a></h3></th>
                 <th style="font-size: large; width:10px" ><h3><a href="FrmGradoEstudios.aspx?idInstructor=<%=instructor.Idpersona %>">Grado de estudios</a></h3></th>
-                <th style="font-size: large; width:10px" ><h3><a href=".aspx?idInstructor=">
+                <th style="font-size: large; width:10px" ><h3><a href="PDF/PdfUploader.aspx?idInstructor=<%=instructor.Idpersona %>">
                 Ver CV <%=instructor.RutaCurriculum%></a></h3></th>
                 <td style="visibility:visible; width: 2px;"><%=instructor.RutaFoto %></td>
                 
