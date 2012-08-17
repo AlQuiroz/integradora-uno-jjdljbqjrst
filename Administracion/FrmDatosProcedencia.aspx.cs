@@ -11,6 +11,7 @@ public partial class FrmDatosProcedencia : System.Web.UI.Page
     public List<empatiagamt.DatosPocedencia> ListaDatosProcedencia = new List<empatiagamt.DatosPocedencia>();
     protected void Page_Load(object sender, EventArgs e)
     {
+        txtFecha.Text = DateTime.Now.ToString("dd-MM-yyyy");
         if (Request.QueryString["idEscuela"] != null)
         {
             txtClaveEscuela.Text = Request.QueryString["idEscuela"].ToString();

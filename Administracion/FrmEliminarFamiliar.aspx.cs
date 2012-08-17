@@ -40,6 +40,9 @@ public partial class FrmEliminarFamiliar : System.Web.UI.Page
                 lblEdoCivil.Text = part.DTable.Rows[0][5].ToString();
                 lblEmail.Text = part.DTable.Rows[0][6].ToString();
                 Image1.ImageUrl = part.DTable.Rows[0][7].ToString();
+                lblParentezco.Text = part.DTable.Rows[0][8].ToString();
+                lblEmpresa.Text = part.DTable.Rows[0][9].ToString();
+                lblPuesto.Text = part.DTable.Rows[0][10].ToString();
             }
         }
     }

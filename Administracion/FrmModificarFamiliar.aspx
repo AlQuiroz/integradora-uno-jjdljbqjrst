@@ -39,7 +39,7 @@
     </tr>
     <tr>
         <td style="width: 238px; height: 32px;" align="left">
-            <div class="rowElem"> <label style="font-weight:bold" >Sexo:</label>&nbsp;<br />
+            <div class="rowElem"> Parentezco:<br />
 &nbsp;<select name="sexo" id="slcParentezco" runat="server" clientidmode="Static" style=" font-family:Verdana;font-size:8pt;" onclick="return sexo_onclick()">
 				          <option value="-1">-----</option>
                           <option value="Padre">Padre</option>

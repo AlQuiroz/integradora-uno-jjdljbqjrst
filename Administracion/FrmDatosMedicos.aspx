@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="FrmDatosMedicos.aspx.cs" Inherits="FrmDatosMedicos" MaintainScrollPositionOnPostback="true"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <fieldset>
+    <fieldset style="border-style:none">
 
     <table>
     <tr><td align="right" colspan="3"> 
-        <asp:Label ID="lblIdParticipante" runat="server"></asp:Label>
-        <asp:Label ID="lblIdHistorial" runat="server"></asp:Label>
+        <asp:Label ID="lblIdParticipante" runat="server" Visible="False"></asp:Label>
+        <asp:Label ID="lblIdHistorial" runat="server" Visible="False"></asp:Label>
         Fecha:<label style="font-weight:bold" __designer:mapid="3d"><asp:Label ID="lblFecha" runat="server"></asp:Label>
             </label>&nbsp;</td></tr>
     <tr>
@@ -53,12 +53,10 @@
             </td>
         
         <td> 
-            <asp:Label style="font-weight:bold" ID="Label1" runat="server" Text="Imc : "></asp:Label><br />
-            <asp:TextBox ID="txtImc" runat="server" ReadOnly="True"></asp:TextBox>
+            <br />
         </td>
         
-        <td><label style="font-weight:bold" >Estado Actual:</label> 
-            <asp:Label ID="lblEstado" runat="server"></asp:Label></td>
+        <td>&nbsp;</td>
         
         </tr>
         </table>
@@ -69,7 +67,7 @@
     <td><asp:Button ID="btnGuardar" runat="server" Text="Guardar" 
             UseSubmitBehavior="False" onclick="btnGuardar_Click" /></td>
     <td><asp:Button ID="btnEliminar" runat="server" Text="Eliminar" Height="26px" 
-            UseSubmitBehavior="False" onclick="btnEliminar_Click" /></td>
+            UseSubmitBehavior="False" onclick="btnEliminar_Click" Visible="False" /></td>
     <td><asp:Button ID="btnTerminar" runat="server" Text="Terminar" 
             UseSubmitBehavior="False" onclick="btnTerminar_Click" /></td>
     </tr>
@@ -85,7 +83,7 @@
 
 
 <!--INICIO DE TABLAS CON INFORMACIÓN IMC-->
-<fieldset id="Tablas">
+<fieldset id="Tablas" style="border-style:none">
     <br />
     <br />
     <table>

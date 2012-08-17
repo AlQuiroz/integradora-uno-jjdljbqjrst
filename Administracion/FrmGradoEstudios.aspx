@@ -8,8 +8,8 @@
 <tr>
 <td>Id grado</td>
 <td>
-    <asp:Label ID="lblIdGrado" runat="server" Text=""></asp:Label>
-    <asp:Label ID="lblIdInstructor" runat="server"></asp:Label>
+    <asp:Label ID="lblIdGrado" runat="server" Visible="False"></asp:Label>
+    <asp:Label ID="lblIdInstructor" runat="server" Visible="False"></asp:Label>
     </td>
 </tr>
 <tr>

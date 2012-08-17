@@ -46,7 +46,7 @@
                 <asp:Button ID="btnTerminar"
                     runat="server" Text="Terminar" CssClass="style2" 
                     onclick="btnTerminar_Click" />
-                <asp:Label ID="lblIdParticipante" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="lblIdParticipante" runat="server" Text="Label" Visible="False"></asp:Label>
             </td>
             
         </tr>

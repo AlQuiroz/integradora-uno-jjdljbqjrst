@@ -7,6 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 <fieldset style="border-style:none">
+<center>
 <table style="border-bottom-style:none">
 <tr>
 <td class="style1"><strong>Clave procedencia</strong></td>
@@ -64,6 +65,7 @@
 
 </tr>
 </table>
-
+</center>
 </fieldset>
+
 </asp:Content>

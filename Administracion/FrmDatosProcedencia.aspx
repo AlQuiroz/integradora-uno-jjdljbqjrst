@@ -9,7 +9,8 @@
 <tr>
 <td class="style1"><strong>Clave del participante</strong></td>
 <td>
-    <asp:TextBox ID="txtClaveParticipante" runat="server" Width="34px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+    <asp:TextBox ID="txtClaveParticipante" runat="server" Width="34px" 
+        ReadOnly="True"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
     <!--PANEL DE BUSQUEDA DE ESCUELAS-->
 </tr>

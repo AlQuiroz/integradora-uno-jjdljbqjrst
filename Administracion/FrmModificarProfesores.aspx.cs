@@ -10,7 +10,7 @@ public partial class FrmModificarProfesores : System.Web.UI.Page
 {
 
     private empatiagamt.Instructor per;
-    private List<empatiagamt.Parametros[]> listaTelefonos;
+    private List<empatiagamt.Parametros[]> listaTelefonos = new List<empatiagamt.Parametros[]>();
     public ArrayList ListadoParticipantes = new ArrayList();
 
     protected void Page_Load(object sender, EventArgs e)
@@ -20,11 +20,11 @@ public partial class FrmModificarProfesores : System.Web.UI.Page
             {
                 lblIdInstructor.Text = Request.QueryString["idInstructor"].ToString();
             }
-
+            llenartelefonos();
+            LlenarText();
         }
-
-        LlenarText();
-        llenartelefonos();
+        
+        
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
@@ -75,7 +75,7 @@ public partial class FrmModificarProfesores : System.Web.UI.Page
 
     private List<empatiagamt.Parametros[]> crearListaTelefonos()
     {
-        listaTelefonos = new List<empatiagamt.Parametros[]>();
+        listaTelefonos.Clear(); 
         empatiagamt.Parametros[] telefono;
         for (int i = 0; i < listBoxTelefonos.Items.Count; i++)
         {

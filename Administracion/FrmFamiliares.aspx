@@ -40,7 +40,7 @@
             <br />
             <asp:Button ID="btnCargar" runat="server" onclick="btnCargar_Click" 
                 Text="Cargar" UseSubmitBehavior="False" />
-            <asp:Label ID="lblIdParticipante" runat="server"></asp:Label>
+            <asp:Label ID="lblIdParticipante" runat="server" Visible="False"></asp:Label>
         </td>
     </tr>
     <tr>

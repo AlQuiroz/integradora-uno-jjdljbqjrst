@@ -10,9 +10,9 @@
 <center>
     <asp:Button ID="btnnueva" runat="server" Text="Agregar Escuela Nueva" 
         onclick="btnnueva_Click" />
-    <asp:Label ID="lblFrmOrigen" runat="server" Text="FrmOrigen"></asp:Label>
-    <asp:Label ID="lblIdParticipante" runat="server"></asp:Label>
-    <asp:Label ID="lblIdDatos" runat="server"></asp:Label>
+    <asp:Label ID="lblFrmOrigen" runat="server" Text="FrmOrigen" Visible="False"></asp:Label>
+    <asp:Label ID="lblIdParticipante" runat="server" Visible="False"></asp:Label>
+    <asp:Label ID="lblIdDatos" runat="server" Visible="False"></asp:Label>
     <br />
     <br />
 <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
