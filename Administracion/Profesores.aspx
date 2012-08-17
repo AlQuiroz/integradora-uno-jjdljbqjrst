@@ -150,7 +150,7 @@
     <tr>
     <td colspan="4">
         <asp:Button ID="btnGuardar" runat="server" 
-            Text="Guardar" UseSubmitBehavior="False" onclick="btnGuardar_Click" />
+            Text="Guardar" onclick="btnGuardar_Click" />
         <asp:Button ID="btnTerminar" runat="server" onclick="btnTerminar_Click" 
             Text="Terminar" />
         </td>
@@ -172,7 +172,6 @@
                 <th style="font-size: large; width: 123px;"><h3>Edo civil</h3></th>
                 <th style="font-size: large; width: 75px;"><h3>E-mail</h3></th>
                 <th style="font-size: large"><h3>Modficar</h3></th>
-                <th style="font-size: large"><h3>Eliminar</h3></th>
                 <th style="font-size: large"><h3>Datos Factura</h3></th>
                 <th style="font-size: large"><h3>Grado de estudios</h3></th>
                 <th style="font-size: large"><h3>Curriculum Vitae</h3></th>
@@ -202,12 +201,10 @@
                 <td style="width: 50px"><%=instructor.EdoCivil %></td>
                 <td style="width: 75px"><a href="mailto:#"><%=instructor.Email %></a></td>
                 <th style="font-size: large;width:10px"><h3>  <a href="FrmModificarProfesores.aspx?idInstructor=<%=instructor.Idpersona %>"><img src="../Styles/images/editLog.png"/></a></h3></th>
-                <th style="font-size: large;width:10px"><h3><a href=".aspx?idParticipante="><img src="../Styles/images/delete.png" /></a></h3></th>
-                <th style="font-size: large; width:10px" ><h3><a href=".aspx?idParticipante=">
+                <th style="font-size: large; width:10px" ><h3><a href="FrmDatosFacturaInstructor.aspx?idInstructor=<%=instructor.Idpersona %>">
                     <img src="../Styles/images/factura.png" style="height: 20px; width: 24px" /></a></h3></th>
-                <th style="font-size: large; width:10px" ><h3><a href=".aspx?idParticipante=">
-                Grado de estudios</a></h3></th>
-                <th style="font-size: large; width:10px" ><h3><a href=".aspx?idParticipante=">
+                <th style="font-size: large; width:10px" ><h3><a href="FrmGradoEstudios.aspx?idInstructor=<%=instructor.Idpersona %>">Grado de estudios</a></h3></th>
+                <th style="font-size: large; width:10px" ><h3><a href=".aspx?idInstructor=">
                 Ver CV <%=instructor.RutaCurriculum%></a></h3></th>
                 <td style="visibility:visible; width: 2px;"><%=instructor.RutaFoto %></td>
                 
