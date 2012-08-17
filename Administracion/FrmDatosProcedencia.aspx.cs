@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 public partial class FrmDatosProcedencia : System.Web.UI.Page
 {
     public empatiagamt.DatosPocedencia dproc;
+    public List<empatiagamt.DatosPocedencia> ListaDatosProcedencia = new List<empatiagamt.DatosPocedencia>();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.QueryString["idEscuela"] != null)
@@ -36,6 +37,7 @@ public partial class FrmDatosProcedencia : System.Web.UI.Page
         dproc = new empatiagamt.DatosPocedencia();
         dproc.IdPart = txtClaveParticipante.Text;
         dproc.Mostrar();
+        ListaDatosProcedencia = dproc.ListaDatosProcedencia;
     }
 
     protected void btnTerminar_Click(object sender, EventArgs e)

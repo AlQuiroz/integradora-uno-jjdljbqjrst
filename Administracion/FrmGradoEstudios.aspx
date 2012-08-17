@@ -71,9 +71,9 @@
                 empatiagamt.GradoEstudios g;
                 try
                 {
-                    for (int i = 0; i < estudios.ListaGradosEstudio.Count; i++)
+                    for (int i = 0; i < Listagrados.Count; i++)
                     {
-                        g = (empatiagamt.GradoEstudios)estudios.ListaGradosEstudio[i];
+                        g = (empatiagamt.GradoEstudios)Listagrados[i];
               
               %>
             <tr>

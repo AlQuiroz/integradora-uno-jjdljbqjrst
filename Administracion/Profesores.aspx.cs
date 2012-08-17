@@ -10,7 +10,7 @@ public partial class Profesores : System.Web.UI.Page
 {
     public empatiagamt.Instructor ins;
     private List<empatiagamt.Parametros[]> listaTelefonos;
-    public ArrayList ListadoParticipantes = new ArrayList();
+    public List<empatiagamt.Instructor> ListadoInstructor = new List<empatiagamt.Instructor>();
     protected void Page_Load(object sender, EventArgs e)
     {
         LlenarTabla();
@@ -18,13 +18,13 @@ public partial class Profesores : System.Web.UI.Page
     
     protected void btnCargar_Click(object sender, EventArgs e)
     {
-        
+        LlenarTabla();
     }
 
     public void LlenarTabla() {
         ins = new empatiagamt.Instructor();
-        
         ins.Mostrar();
+        ListadoInstructor = ins.ListaInstructor;
     }
     #region: Manejo de teléfonos
 

@@ -16,7 +16,7 @@ public partial class FrmDatosFacturaParticipante : System.Web.UI.Page
             lblIdParticipante.Text = Request.QueryString["idParticipante"].ToString();
         }
         fact = new empatiagamt.FactutaParticipante(lblIdParticipante.Text);
-        fact.Mostrar();
+        
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {

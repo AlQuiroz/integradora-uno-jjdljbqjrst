@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 public partial class FrmGradoEstudios : System.Web.UI.Page
 {
     public empatiagamt.GradoEstudios estudios;
+    public List<empatiagamt.GradoEstudios> Listagrados = new List<empatiagamt.GradoEstudios>();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.IsPostBack == false)
@@ -33,6 +34,7 @@ public partial class FrmGradoEstudios : System.Web.UI.Page
         estudios = new empatiagamt.GradoEstudios();
         estudios.IdInst = lblIdInstructor.Text;
         estudios.Mostrar();
+        Listagrados = estudios.ListaGradosEstudio;
     }
 
     protected void btnTerminar_Click(object sender, EventArgs e)

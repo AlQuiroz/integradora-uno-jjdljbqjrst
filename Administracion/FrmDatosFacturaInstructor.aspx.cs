@@ -15,7 +15,7 @@ public partial class FrmDatosFacturaInstructor : System.Web.UI.Page
         {
             lblIdParticipante.Text = Request.QueryString["idInstructor"].ToString();
         }
-        fact = new empatiagamt.FactutaParticipante(lblIdParticipante.Text);
+        fact = new empatiagamt.FactutaInstructor(lblIdParticipante.Text);
         fact.Mostrar();
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
