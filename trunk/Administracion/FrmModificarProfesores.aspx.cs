@@ -99,7 +99,7 @@ public partial class FrmModificarProfesores : System.Web.UI.Page
         {
             for (int i = 0; i < tel.DTable.Rows.Count; i++)
             {
-                listBoxTelefonos.Items.Add(tel.DTable.Rows[i][2].ToString().Trim() + "" + tel.DTable.Rows[i][3].ToString().Trim());
+                listBoxTelefonos.Items.Add(tel.DTable.Rows[i][2].ToString().Trim() + "/" + tel.DTable.Rows[i][3].ToString().Trim());
             }
         }
     }
@@ -114,7 +114,7 @@ public partial class FrmModificarProfesores : System.Web.UI.Page
         txtNopmbre.Text = per.DTable.Rows[0][1].ToString();
         txtApellidoPat.Text = per.DTable.Rows[0][2].ToString();
         txtApellidoMat.Text = per.DTable.Rows[0][3].ToString();
-        txtfecha.Text = Convert.ToDateTime(per.DTable.Rows[0][4].ToString()).ToString("yyyy-MM-dd)");
+        txtfecha.Text = Convert.ToDateTime(per.DTable.Rows[0][4].ToString()).ToString("yyyy-MM-dd");
         edocivil.Value = per.DTable.Rows[0][5].ToString();
         txtEmail.Text = per.DTable.Rows[0][6].ToString();
         Image1.ImageUrl = per.DTable.Rows[0][7].ToString();

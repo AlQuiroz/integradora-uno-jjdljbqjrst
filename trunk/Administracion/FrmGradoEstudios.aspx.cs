@@ -16,7 +16,9 @@ public partial class FrmGradoEstudios : System.Web.UI.Page
             {
                 lblIdInstructor.Text = Request.QueryString["idInstructor"].ToString();
             }
-            else { lblIdInstructor.Text = "194"; }
+            else {
+                //lblIdInstructor.Text = "194"; 
+            }
         }
         VerLista(); //llenar lista
     }

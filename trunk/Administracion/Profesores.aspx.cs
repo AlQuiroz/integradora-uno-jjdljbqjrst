@@ -13,9 +13,6 @@ public partial class Profesores : System.Web.UI.Page
     public ArrayList ListadoParticipantes = new ArrayList();
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Page.IsPostBack == false) { 
-
-        }
         LlenarTabla();
     }
     
@@ -33,7 +30,7 @@ public partial class Profesores : System.Web.UI.Page
 
     protected void btnAgregarTel_Click(object sender, EventArgs e)
     {
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add(txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
     }
 
     protected void btnQuitarTel_Click(object sender, EventArgs e)
@@ -47,7 +44,7 @@ public partial class Profesores : System.Web.UI.Page
     protected void btnModificarTel_Click(object sender, EventArgs e)
     {
         listBoxTelefonos.Items.RemoveAt(listBoxTelefonos.SelectedIndex);
-        listBoxTelefonos.Items.Add("" + txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
+        listBoxTelefonos.Items.Add(txtTipoTelefono.Text.ToUpper() + "/" + "" + txtNumeroTel.Text);
     }
 
     protected void listBoxTelefonos_SelectedIndexChanged(object sender, EventArgs e)
