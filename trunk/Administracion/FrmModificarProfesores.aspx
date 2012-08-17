@@ -31,9 +31,10 @@
                   Font-Bold="True" ForeColor="Red">*</asp:RequiredFieldValidator>
         </td>
         <td style="height: 62px" align="left">
-            <div><asp:Image ID="Image1" runat="server" Height="113px" Width="275px" 
+            <div>
+                <asp:Image ID="Image1" runat="server" Height="113px" Width="275px" 
                     ClientIDMode="Static" ImageUrl="~/images/logotipo.png" 
-                    ImageAlign="Middle" /></div>
+                    ImageAlign="Middle" Visible="False" /></div>
              <div class="rowsElem"><span> <label style="font-weight:bold" >Fotografia:</label></span>&nbsp;</div>
              
             <asp:FileUpload ID="fUploadFoto" runat="server" ClientIDMode="Static" />
