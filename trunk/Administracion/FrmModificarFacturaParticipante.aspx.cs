@@ -20,7 +20,8 @@ public partial class FrmModificarFacturaParticipante : System.Web.UI.Page
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         fact = new empatiagamt.FactutaParticipante(lblIdFactura.Text, txtNombre.Text, txtRFC.Text, txtDireccion.Text, txtTelefono.Text, lblIdParticipante.Text);
-        fact.Modificar();
+        if(fact.Modificar())
+            Response.Redirect("~/Administracion/FrmDatosFacturaParticipante.aspx?idParticipante=" + lblIdParticipante.Text);
 
     }
     protected void btnTerminar_Click(object sender, EventArgs e)

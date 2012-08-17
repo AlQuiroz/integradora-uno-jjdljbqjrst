@@ -62,6 +62,7 @@ namespace empatiagamt
         public HstorialMedico(string historial, string instit, string tratam)
         {
             Institucion = instit; Tratamiento = tratam;
+            Tratamiento = tratam;
             IdHistorial = historial;
         }
 

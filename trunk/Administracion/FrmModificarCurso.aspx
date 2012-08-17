@@ -6,7 +6,7 @@
 <tr> 
 <td>Clave del servicio</td>
 <td>
-    <asp:TextBox ID="txtClave" runat="server"></asp:TextBox></td>
+    <asp:TextBox ID="txtClave" runat="server" ReadOnly="True"></asp:TextBox></td>
 </tr>
 
 <tr> 

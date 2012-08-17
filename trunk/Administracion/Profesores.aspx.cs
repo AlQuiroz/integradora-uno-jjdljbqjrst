@@ -13,7 +13,10 @@ public partial class Profesores : System.Web.UI.Page
     public List<empatiagamt.Instructor> ListadoInstructor = new List<empatiagamt.Instructor>();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LlenarTabla();
+        if (Page.IsPostBack == false) {
+            LlenarTabla();
+        }
+        
     }
     
     protected void btnCargar_Click(object sender, EventArgs e)
@@ -94,8 +97,20 @@ public partial class Profesores : System.Web.UI.Page
     {
         this.crearListaTelefonos();
         ins = new empatiagamt.Instructor("", txtNopmbre.Text, txtApellidoPat.Text, txtApellidoMat.Text, txtfecha.Text, edocivil.Value, listaTelefonos, txtEmail.Text, fUploadFoto.FileName);
-        ins.Agregar();
-        LlenarTabla();
+        if (ins.Agregar())
+        {
+            BorrarCampos();
+            LlenarTabla();
+        }
         
+    }
+
+    public void BorrarCampos()
+    {
+
+        txtApellidoMat.Text = ""; txtNopmbre.Text = ""; txtApellidoPat.Text = "";
+        txtEmail.Text = "";  txtfecha.Text = "";
+        txtNumeroTel.Text = "";  txtTipoTelefono.Text = "";
+        listBoxTelefonos.Items.Clear();
     }
 }

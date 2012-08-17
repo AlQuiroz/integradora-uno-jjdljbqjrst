@@ -133,20 +133,11 @@ namespace empatiagamt
             param[0] = new Parametros("Id", IdDatosProcedencia);
             if (LeerTabla("datosProcedenciaConsultarId", param))
             {
-                DatosPocedencia dp;
-                listaDatosProcedencia = new List<DatosPocedencia>();
                 for (int i = 0; i < DTable.Rows.Count; i++)
                 {
-                    dp = new DatosPocedencia();
-                    dp.IdDatosProcedencia = DTable.Rows[i][0].ToString();
-                    dp.IdEsc = DTable.Rows[i][1].ToString();
-                    dp.IdPart = DTable.Rows[i][2].ToString();
-                    dp.Profesor = DTable.Rows[i][3].ToString();
-                    dp.Promedio = DTable.Rows[i][4].ToString();
-                    dp.Fecha = DTable.Rows[i][5].ToString();
-                    listaDatosProcedencia.Add(dp);
+                    return true;
                 }
-                return true;
+                //return true;
             }
             return false;
         }

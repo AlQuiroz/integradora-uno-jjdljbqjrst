@@ -95,7 +95,10 @@ public partial class FrmFamiliares : System.Web.UI.Page
     {
         per = new empatiagamt.Familiar("", txtNopmbre.Text.ToUpper(), txtApellidoPat.Text.ToUpper(), txtApellidoMat.Text.ToUpper(), txtfecha.Text, edocivil.Value.ToUpper(), crearListaTelefonos(), txtEmail.Text, fUploadFoto.FileName.ToString(), slcParentezco.Value.ToUpper(), txtEmpresa.Text.ToUpper(), txtPuesto.Text.ToUpper(), lblIdParticipante.Text);
         per.Agregar();
-        mostrarListadoFamiliares();
+        {
+            mostrarListadoFamiliares();
+            BorrarCampos();
+        }
     }
 
     private void mostrarListadoFamiliares()
@@ -127,4 +130,13 @@ public partial class FrmFamiliares : System.Web.UI.Page
             
         Response.Redirect("~/Administracion/Participantes.aspx");
     }
+
+    public void BorrarCampos() {
+
+        txtApellidoMat.Text = ""; txtNopmbre.Text = ""; txtApellidoPat.Text = "";
+        txtEmail.Text = ""; txtEmpresa.Text = ""; txtfecha.Text = "";
+        txtNumeroTel.Text = ""; txtPuesto.Text = ""; txtTipoTelefono.Text = "";
+        listBoxTelefonos.Items.Clear();
+    }
+
 }

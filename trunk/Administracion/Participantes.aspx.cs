@@ -86,8 +86,12 @@ public partial class Participantes : System.Web.UI.Page
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         per = new empatiagamt.Participante("", txtNopmbre.Text.ToUpper(), txtApellidoPat.Text.ToUpper(), txtApellidoMat.Text.ToUpper(), txtfecha.Text, edocivil.Value.ToUpper(), crearListaTelefonos(), txtEmail.Text, fUploadFoto.FileName.ToString());
-        per.Agregar();
-        mostrarListadoParticipante();
+        if (per.Agregar())
+        {
+            mostrarListadoParticipante();
+            BorrarCampos();
+        }
+
     }
 
 
@@ -127,5 +131,14 @@ public partial class Participantes : System.Web.UI.Page
             
         }
         catch { }
+    }
+
+    public void BorrarCampos()
+    {
+
+        txtApellidoMat.Text = ""; txtNopmbre.Text = ""; txtApellidoPat.Text = "";
+        txtEmail.Text = "";  txtfecha.Text = "";
+        txtNumeroTel.Text = "";  txtTipoTelefono.Text = "";
+        listBoxTelefonos.Items.Clear();
     }
 }

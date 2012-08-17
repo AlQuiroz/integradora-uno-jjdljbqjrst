@@ -72,7 +72,7 @@ namespace empatiagamt
         public override bool Eliminar()
         {
             param = new empatiagamt.Parametros[1];
-            param[0] = new Parametros("rfc",RFC);
+            param[0] = new Parametros("idFac", IdFactura);
 
             return EjecutarStore(param, "datosfacturacionBorrar");
         }
@@ -92,9 +92,9 @@ namespace empatiagamt
         public override bool Mostrar()
         {
             param = new Parametros[1];
-            param[0] = new Parametros("", "");
+            param[0] = new Parametros("idFact", IdFactura);
 
-            if (LeerTabla("datosFacturacionConsultar",param))
+            if (LeerTabla("datosFacturacionConsultarId", param))
             {
                 return true;
             }

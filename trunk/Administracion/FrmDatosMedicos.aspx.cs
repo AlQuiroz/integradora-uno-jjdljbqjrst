@@ -16,14 +16,14 @@ public partial class FrmDatosMedicos : System.Web.UI.Page
             lblFecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
             lblIdParticipante.Text = Request.QueryString["idParticipante"];
             lblIdHistorial.Text = Request.QueryString["idHistorial"];
+            LlenarForm();
         }
-        LlenarForm();
 
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
         //la institucion y el tratamiento siempre se modifica
-        histMedico = new empatiagamt.HstorialMedico( lblIdHistorial.Text, txtInstitcion.Text, txtTratamiento.Text);
+        histMedico = new empatiagamt.HstorialMedico(lblIdHistorial.Text, txtInstitcion.Text, txtTratamiento.Text);
         
         histMedico.Modificar();
 
@@ -33,18 +33,16 @@ public partial class FrmDatosMedicos : System.Web.UI.Page
             {
                 //si los campos de peso y talla tienen datos, tonces se crea un objeto que reciba esa información
                 imc = new empatiagamt.HstorialMedico(lblIdHistorial.Text, Convert.ToDouble(txtTalla.Text), Convert.ToDouble(txtPeso.Text));
-                imc.Agregar();
+                imc.Agregar();   
             }
         }
-        
-        
         LlenarForm();
     }
     protected void btnEliminar_Click(object sender, EventArgs e)
     {
-        imc = new empatiagamt.HstorialMedico();
-        imc.IdIMC = "1"; //id del registro seleccionado de la tabla de detalles
-        imc.Eliminar(); //elimina un solo registro de la tabla
+        //imc = new empatiagamt.HstorialMedico();
+        //imc.IdIMC = "1"; //id del registro seleccionado de la tabla de detalles
+        //imc.Eliminar(); //elimina un solo registro de la tabla
     }
     protected void btnTerminar_Click(object sender, EventArgs e)
     {

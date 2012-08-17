@@ -16,11 +16,11 @@ public partial class FrmDatosFacturaParticipante : System.Web.UI.Page
             lblIdParticipante.Text = Request.QueryString["idParticipante"].ToString();
         }
         fact = new empatiagamt.FactutaParticipante(lblIdParticipante.Text);
-        
+        fact.Mostrar();
     }
     protected void btnGuardar_Click(object sender, EventArgs e)
     {
-        fact = new empatiagamt.FactutaParticipante("", txtNombre.Text.ToUpper(),txtRFC.Text.ToUpper(), txtDireccion.Text.ToUpper(), txtTelefono.Text.ToUpper(), lblIdParticipante.Text);
+        fact = new empatiagamt.FactutaParticipante(lblIdParticipante.Text, txtNombre.Text.ToUpper(),txtRFC.Text.ToUpper(), txtDireccion.Text.ToUpper(), txtTelefono.Text.ToUpper(), lblIdParticipante.Text);
         fact.Agregar();
         fact.Mostrar();
     }

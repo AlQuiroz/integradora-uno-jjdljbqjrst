@@ -70,7 +70,7 @@ public partial class FrmModificarParticipante : System.Web.UI.Page
             txtNopmbre.Text = part.DTable.Rows[0][1].ToString();
             txtApellidoPat.Text = part.DTable.Rows[0][2].ToString();
             txtApellidoMat.Text = part.DTable.Rows[0][3].ToString();
-            txtfecha.Text = ""+ Convert.ToDateTime( part.DTable.Rows[0][4].ToString()).ToString("yyyy-MM-dd)");
+            txtfecha.Text = ""+ Convert.ToDateTime( part.DTable.Rows[0][4].ToString()).ToString("yyyy-MM-dd");
             edocivil.Value = part.DTable.Rows[0][5].ToString();
             txtEmail.Text = part.DTable.Rows[0][6].ToString();
             Image1.ImageUrl = part.DTable.Rows[0][7].ToString();

@@ -11,14 +11,15 @@
 <td>Folio</td>
 <td>
     <asp:TextBox ID="txtIdDato" runat="server" ReadOnly="True" Width="32px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label 
-        ID="lblFrm" runat="server"></asp:Label>
+        ID="lblFrm" runat="server" Visible="False"></asp:Label>
     &nbsp;&nbsp;&nbsp; </td>
 </tr>
 
 <tr>
 <td class="style1"><strong>Clave del participante</strong></td>
 <td>
-    <asp:TextBox ID="txtClaveParticipante" runat="server" Width="34px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+    <asp:TextBox ID="txtClaveParticipante" runat="server" Width="34px" 
+        ReadOnly="True"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
 
     <!--PANEL DE BUSQUEDA DE ESCUELAS-->
 </tr>
