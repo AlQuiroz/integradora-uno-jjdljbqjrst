@@ -11,16 +11,12 @@
             </td>
             <td style="width: 307px">
                 &nbsp;
-                <asp:RadioButton ID="RadioButton1" runat="server" /><strong>&nbsp;Maestro</strong>
-                <br />
-                <br />
-                <br />
-                <asp:RadioButton ID="RadioButton2" runat="server" /><strong>&nbsp;Alumno</strong>
+                <asp:RadioButton ID="rbMaestro" runat="server" GroupName="rb" /><strong>&nbsp;Maestro</strong> &nbsp
+                <asp:RadioButton ID="rbAlumno" runat="server" GroupName="rb" /><strong>&nbsp;Alumno</strong>
             </td>
             <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnObtener" runat="server" Text="Obtener" Height="37px" 
-                    Width="107px" />
+                <asp:Button ID="btnObtener" runat="server" Text="Obtener" Height="21px" 
+                    Width="76px" CausesValidation="False" ClientIDMode="Static" />
             </td>
         </tr>
     </table>
@@ -44,7 +40,7 @@
 				<td><a href="mailto:#">tortor@est.ca</a></td>
 				<td>53082</td>
                 <td><asp:TextBox ID="txtFecha" runat="server" class="w8em format-d-m-y highlight-days-67 range-low-today" ></asp:TextBox></td>
-                <td><asp:Button ID="btnImprimir" runat="server" Text="Imprimir" /></td>
+                <td><a href="">Imprimir</a>&nbsp;</td>
               
 			</tr>
             
