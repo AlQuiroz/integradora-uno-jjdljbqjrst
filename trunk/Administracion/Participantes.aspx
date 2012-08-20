@@ -163,6 +163,7 @@
                 <th style="font-size: large"><h3>Familiar</h3></th>
                 <th style="font-size: large"><h3>Datos Factura</h3></th>
                 <th style="font-size: large"><h3>Antecedentes escolares</h3></th>
+                <th style="font-size: large"><h3>Constancias de participación</h3></th>
                 <th style="visibility:hidden; width: 1px;" ><h3>Rutafoto</h3></th>
                 <th style="visibility:hidden; width: 1px;"><h3>Idhistorial</h3></th>
 			</tr>
@@ -196,6 +197,10 @@
                     <img src="../Styles/images/factura.png" style="height: 20px; width: 24px" /></a></h3></th>
                 <th style="font-size: large; width:10px" ><h3><a href="FrmDatosProcedencia.aspx?idParticipante=<%=p.Idpersona%>">
                     <img src="../Styles/images/schoolLog.png" style="height: 20px; width: 24px" /></a></h3></th>
+
+                <th style="font-size: large; width:10px" ><h3><a href="FrmImpresionConstancias.aspx?idParticipante=<%=p.Idpersona %>">
+                Ver sus cursos</a></h3></th>
+
                 <td style="visibility:hidden; width: 2px;"><%=p.RutaFoto%></td>
                 <td style="visibility:hidden; width: 2px;"><%=p.IdHistorial%></td>
 			</tr>

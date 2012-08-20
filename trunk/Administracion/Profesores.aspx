@@ -165,6 +165,7 @@
                 <th style="font-size: large"><h3>Datos Factura</h3></th>
                 <th style="font-size: large"><h3>Grado de estudios</h3></th>
                 <th style="font-size: large"><h3>Curriculum Vitae</h3></th>
+                <th style="font-size: large"><h3>Constancias</h3></th>
                 <th style="visibility:visible; width: 1px;" ><h3>Rutafoto</h3></th>
                 
 			</tr>
@@ -196,6 +197,9 @@
                 <th style="font-size: large; width:10px" ><h3><a href="FrmGradoEstudios.aspx?idInstructor=<%=instructor.Idpersona %>">Grado de estudios</a></h3></th>
                 <th style="font-size: large; width:10px" ><h3><a href="PDF/PdfUploader.aspx?idInstructor=<%=instructor.Idpersona %>">
                 Ver CV <%=instructor.RutaCurriculum%></a></h3></th>
+                <th style="font-size: large; width:10px" ><h3><a href="FrmImpresionConstancias.aspx?idInstructor=<%=instructor.Idpersona %>">
+                Ver participación</a></h3></th>
+
                 <td style="visibility:visible; width: 2px;"><%=instructor.RutaFoto %></td>
                 
 			</tr>
