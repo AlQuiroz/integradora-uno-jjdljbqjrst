@@ -6,19 +6,20 @@
             <td align="left" colspan="2">
                 Clave del Instructor<br />
                 <asp:TextBox ID="txtMaestro" runat="server" Width="95px"></asp:TextBox>&nbsp; 
-                <a target="_blank" href="">Buscar Instructor</a>
+                <a href="BuscarProfesor.aspx">Buscar Instructor</a>
                 <br />
             </td>
             <td align="left" colspan="1" style="width: 286px">
              Clave del Curso<br />
                 <asp:TextBox ID="txtCurso" runat="server" Width="79px"></asp:TextBox>&nbsp; 
-                <a target="_blank" href="">Buscar Curso</a>
+                <a href="BuscarCusros.aspx">Buscar Curso</a>
+                <asp:Label ID="lblIdInscripcion" runat="server"></asp:Label>
                 <br />
             </td>
             <td align="left" colspan="1" style="width: 286px">
              Clave del Participante<br />
                 <asp:TextBox ID="txtPartcipante" runat="server" Width="105px"></asp:TextBox>&nbsp; 
-                <a target="_blank" href="">Buscar Participante</a>
+                <a href="BuscarParticipantes.aspx">Buscar Participante</a>
                 <br />
             </td>
         </tr>
@@ -45,12 +46,11 @@
 				<th style="font-size: large" class="style4"><h3>Clave del Inscructor </h3></th>
                 <th style="font-size: large" class="style5"><h3>Fecha de inicio</h3></th>
 				<th style="font-size: large" class="style6"><h3>fecha de fin</h3></th>
-                <th style="font-size: large" class="style7"><h3>Modificar</h3></th>
                 <th style="font-size: large" class="style8"><h3>Eliminar</h3></th>
 			</tr>
 		</thead>
 		<tbody>
-        <%
+            <%
             empatiagamt.inscripcionCurso insc;
             try
             {
@@ -67,8 +67,7 @@
                 <td class="style4"><%=insc.IdInstructor %></td>
                 <td class="style5"><%=insc.Finicio %></td>
                 <td class="style6"><%=insc.FFin %></td>
-                <td class="style7">Modificar</td>
-                <td class="style8">Eliminar</td>
+                <td class="style8"><a href="Asignacion.aspx?accion=borrar&idInscripcion=<%=insc.IdInscripcion %>">Borrar</a></td>
 			</tr>
             <%}
             }
@@ -88,10 +87,10 @@
 			<span>Entries Per Page</span>
 		</div>
 		<div id="navigation">
-			<img src="images/first.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1,true)" />
-			<img src="images/previous.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1)" />
-			<img src="images/next.gif" width="16" height="16" alt="First Page" onclick="sorter.move(1)" />
-			<img src="images/last.gif" width="16" height="16" alt="Last Page" onclick="sorter.move(1,true)" />
+			<img src="../Styles/images/first.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1,true)" />
+			<img src="../Styles/images/previous.gif" width="16" height="16" alt="First Page" onclick="sorter.move(-1)" />
+			<img src="../Styles/images/next.gif" width="16" height="16" alt="First Page" onclick="sorter.move(1)" />
+			<img src="../Styles/images/last.gif" width="16" height="16" alt="Last Page" onclick="sorter.move(1,true)" />
 		</div>
 		<div id="text">Displaying Page <span id="currentpage"></span> of <span id="pagelimit"></span></div>
 	</div>

@@ -13,8 +13,36 @@ public partial class Asignacion : System.Web.UI.Page
     {
         if (Page.IsPostBack == false)
         {
-            
+            if (Request.QueryString["accion"] != null)
+            {
+                if (Request.QueryString["accion"] == "borrar")
+                {
+                    this.BorrarInscripcion();
+                }
+            }
+
+            if (Request.QueryString["idParticipante"] != null)
+            {
+                Session["idParticipante"] = Request.QueryString["idParticipante"].ToString();
+            }
+
+            if (Request.QueryString["idInstructor"] != null)
+            {
+                Session["idInstructor"] = Request.QueryString["idInstructor"].ToString();
+            }
+
+            if (Request.QueryString["idServicio"] != null)
+            {
+                Session["idServicio"] = Request.QueryString["idServicio"].ToString();    
+            }
+            try { txtPartcipante.Text = Session["idParticipante"].ToString(); }
+            catch { }
+            try { txtMaestro.Text = Session["idInstructor"].ToString(); }
+            catch { }
+            try { txtCurso.Text = Session["idServicio"].ToString(); }
+            catch { }
         }
+
         MostrarDatos();
     }
 
@@ -30,5 +58,22 @@ public partial class Asignacion : System.Web.UI.Page
         inscripcion = new inscripcionCurso("",txtMaestro.Text, txtCurso.Text, txtPartcipante.Text, txtFeInicio.Text, txtFeFinal.Text, "");
         inscripcion.Agregar();
         MostrarDatos();
+        BorrarCampos();
     }
+
+    private void BorrarCampos()
+    {
+        Session.Remove("idParticipante");
+        Session.Remove("idInstructor");
+        Session.Remove("idServicio");
+        txtCurso.Text = ""; txtFeFinal.Text = ""; txtFeInicio.Text = ""; txtMaestro.Text = ""; txtPartcipante.Text = "";
+    }
+
+    public bool BorrarInscripcion() {
+        inscripcion = new inscripcionCurso();
+        inscripcion.IdInscripcion = Request.QueryString["idInscripcion"].ToString();
+        inscripcion.Eliminar();
+        return false;
+    }
+
 }

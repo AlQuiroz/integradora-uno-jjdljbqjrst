@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#"  MasterPageFile="~/Administracion/MasterPage.master" AutoEventWireup="true" CodeFile="BuscarParticipantes.aspx.cs" Inherits="Administracion_BuscarParticipantes"  MaintainScrollPositionOnPostback="true"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Administracion/MasterPage.master" CodeFile="BuscarProfesor.aspx.cs" Inherits="Administracion_BuscarProfesor"  MaintainScrollPositionOnPostback="true"%>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ViewStateMode="Enabled" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <fieldset id="TablaPrticipantes" style="border-left-style:none">
     
 <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
@@ -16,7 +16,7 @@
                 <th style="font-size: large; width: 75px;"><h3>E-mail</h3></th>
                 <th style="font-size: large"><h3>Seleccionar</h3></th>
                 
-                <th style="visibility:hidden; width: 1px;" ><h3>Rutafoto</h3></th>
+                <th style="visibility:visible; width: 1px;" ><h3>Rutafoto</h3></th>
                 
 			</tr>
 		</thead>
@@ -24,24 +24,27 @@
         
 		<tbody>
             <%
-            empatiagamt.Participante p;
+            empatiagamt.Instructor instructor;
             try
             {
-                for (int i = 0; i < ListadoParticipantes.Count; i++)
+                for (int i = 0; i < ListadoInstructor.Count; i++)
                 {
-                    p = (empatiagamt.Participante)ListadoParticipantes[i];
+                    instructor = (empatiagamt.Instructor)ListadoInstructor[i];
               
               %>
             <tr>
 				<td>1</td>
-                <td style="width: 50px"><%=p.Idpersona%></td>
-				<td style="width: 139px"><%=p.Nombre%></td>
-				<td style="width: 121px"><%=p.APaterno%></td>
-				<td style="width: 121px"><%=p.AMaterno%></td>
-				<td style="width: 95px"><%=p.FNac%></td>
-                <td style="width: 123px"><%=p.EdoCivil%></td>
-                <td style="width: 75px"><a href="mailto:#"><%=p.Email%></a></td>
-                <th style="font-size: large;width:10px"><h3>  <a href="Asignacion.aspx?idParticipante=<%=p.Idpersona%>">Seleccionar</a></h3></th>
+				<td style="width: 139px"><%=instructor.Idpersona %></td>
+				<td style="width: 121px"><%=instructor.Nombre %></td>
+				<td style="width: 121px"><%=instructor.APaterno %></td>
+				<td style="width: 95px"><%=instructor.AMaterno %></td>
+                <td style="width: 123px"><%=instructor.FNac %></td>
+                <td style="width: 50px"><%=instructor.EdoCivil %></td>
+                <td style="width: 75px"><a href="mailto:#"><%=instructor.Email %></a></td>
+                <th style="font-size: large;width:10px"><h3>  <a href="Asignacion.aspx?idInstructor=<%=instructor.Idpersona %>">Seleccionar</a></h3></th>
+
+                <td style="visibility:visible; width: 2px;"><%=instructor.RutaFoto %></td>
+                
 			</tr>
 
             <% }
