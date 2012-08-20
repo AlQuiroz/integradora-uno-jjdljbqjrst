@@ -4,113 +4,78 @@
     <table>
         <tr>
             <td align="left" colspan="2">
-                Nombre del profesor<br />
-                <asp:TextBox ID="txtMaestro" runat="server" Width="154px"></asp:TextBox>&nbsp; <asp:Button ID="btnBuscar"
-                    runat="server" Text="Buscar" />
-                <br />
-                <br />
-                <br />
+                Clave del Instructor<br />
+                <asp:TextBox ID="txtMaestro" runat="server" Width="95px"></asp:TextBox>&nbsp; 
+                <a target="_blank" href="">Buscar Instructor</a>
                 <br />
             </td>
             <td align="left" colspan="1" style="width: 286px">
-             Nombre del Curso<br />
-                <asp:TextBox ID="txtCurso" runat="server" Width="154px"></asp:TextBox>&nbsp; 
-                <asp:Button ID="btnCurso"
-                    runat="server" Text="Buscar" Width="48px" />
+             Clave del Curso<br />
+                <asp:TextBox ID="txtCurso" runat="server" Width="79px"></asp:TextBox>&nbsp; 
+                <a target="_blank" href="">Buscar Curso</a>
                 <br />
-                <br />
-                <br />
+            </td>
+            <td align="left" colspan="1" style="width: 286px">
+             Clave del Participante<br />
+                <asp:TextBox ID="txtPartcipante" runat="server" Width="105px"></asp:TextBox>&nbsp; 
+                <a target="_blank" href="">Buscar Participante</a>
                 <br />
             </td>
         </tr>
         <tr>
-            <td align="left">
-                <strong>Fecha de incio:</strong>
+            <td colspan="4" align="left">
+                <strong>Fecha de incio:</strong><asp:TextBox ID="txtFeInicio" runat="server" ></asp:TextBox>
+                <strong>Fecha Final:</strong><asp:TextBox ID="txtFeFinal" runat="server"></asp:TextBox>
+                &nbsp; &nbsp; 
+                <asp:Button ID="btnInscribir" runat="server" Text="Inscribir" 
+                    ClientIDMode="Static" onclick="btnInscribir_Click" />
             </td>
-            <td align="left" style="width: 160px">
-                
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                
-                <asp:TextBox ID="txtFeInicio" runat="server" ></asp:TextBox>
-
-            </td>
-            <td align="right" style="width: 286px">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>&nbsp;
-            Fecha Final:</strong>
-            </td>
-            <td align="right">
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <asp:TextBox ID="txtFeFinal" runat="server"></asp:TextBox>
-
-            &nbsp;
-            </td>
+            
         </tr>
    </table>
 <br />
-<br />
-<br />
-    <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable">
+    <table cellpadding="0" cellspacing="0" border="0" id="table" class="sortable" width="70%">
 		<thead>
+        
 			<tr>
-				<th class="nosort" style="font-size: large"><h3>ID</h3></th>
-				<th style="font-size: large"><h3>Nombre</h3></th>
-				<th style="font-size: large"><h3>Direccion</h3></th>
-				<th style="font-size: large"><h3>Email</h3></th>
-				<th style="font-size: large"><h3>Telefono</h3></th>
-                <th style="font-size: large"><h3>Agregar</h3></th>
+				<th class="style9" style="font-size: large"><h3>ID</h3></th>
+				<th style="font-size: large" class="style1"><h3>clave de inscripción</h3></th>
+				<th style="font-size: large" class="style2"><h3>Clave Participante</h3></th>
+				<th style="font-size: large" class="style3"><h3>Clave del servicio</h3></th>
+				<th style="font-size: large" class="style4"><h3>Clave del Inscructor </h3></th>
+                <th style="font-size: large" class="style5"><h3>Fecha de inicio</h3></th>
+				<th style="font-size: large" class="style6"><h3>fecha de fin</h3></th>
+                <th style="font-size: large" class="style7"><h3>Modificar</h3></th>
+                <th style="font-size: large" class="style8"><h3>Eliminar</h3></th>
 			</tr>
 		</thead>
 		<tbody>
+        <%
+            empatiagamt.inscripcionCurso insc;
+            try
+            {
+                for (int i = 0; i < listaInscripcion.Count; i++)
+                {
+                    insc = (empatiagamt.inscripcionCurso)listaInscripcion[i];
+              
+              %>
 			<tr>
-				<td>1</td>
-				<td>Ezekiel Hart</td>
-				<td>(627) 536-4760</td>
-				<td><a href="mailto:#">tortor@est.ca</a></td>
-				<td>53082</td>
-                <td><asp:CheckBox ID="ChecklistAgregar" runat="server" /></td>
+				<td class="style9">1</td>
+				<td class="style1"><%=insc.IdInscripcion %></td>
+				<td class="style2"><%=insc.IdParticipante %></td>
+                <td class="style3"><%=insc.IdServicios %></td>
+                <td class="style4"><%=insc.IdInstructor %></td>
+                <td class="style5"><%=insc.Finicio %></td>
+                <td class="style6"><%=insc.FFin %></td>
+                <td class="style7">Modificar</td>
+                <td class="style8">Eliminar</td>
 			</tr>
-            <tr>
-				<td>1</td>
-				<td>Ezekiel Hart</td>
-				<td>(627) 536-4760</td>
-				<td><a href="mailto:#">tortor@est.ca</a></td>
-				<td>53082</td>
-                <td><asp:CheckBox ID="CheckBox1" runat="server" /></td>
-			</tr>
-            <tr>
-				<td>1</td>
-				<td>Ezekiel Hart</td>
-				<td>(627) 536-4760</td>
-				<td><a href="mailto:#">tortor@est.ca</a></td>
-				<td>53082</td>
-                <td><asp:CheckBox ID="CheckBox2" runat="server" /></td>
-			</tr>
-            <tr>
-				<td>1</td>
-				<td>Ezekiel Hart</td>
-				<td>(627) 536-4760</td>
-				<td><a href="mailto:#">tortor@est.ca</a></td>
-				<td>53082</td>
-                <td><asp:CheckBox ID="CheckBox3" runat="server" /></td>
-            </tr>
-            <tr>
-				<td>1</td>
-				<td>Ezekiel Hart</td>
-				<td>(627) 536-4760</td>
-				<td><a href="mailto:#">tortor@est.ca</a></td>
-				<td>53082</td>
-                <td><asp:CheckBox ID="CheckBox4" runat="server" /></td>
-            </tr>
-            <tr>
-				<td>1</td>
-				<td>Ezekiel Hart</td>
-				<td>(627) 536-4760</td>
-				<td><a href="mailto:#">tortor@est.ca</a></td>
-				<td>53082</td>
-                <td><asp:CheckBox ID="CheckBox5" runat="server" /></td>
-			</tr>
+            <%}
+            }
+            catch { } %>
 		</tbody>
   </table>
+
   <div id="controls">
 		<div id="perpage">
 			<select onchange="sorter.size(this.value)">
@@ -140,4 +105,46 @@
    
     
 </asp:Content>
+
+<asp:Content ID="Content2" runat="server" contentplaceholderid="contentheader">
+    <style type="text/css">
+        .style1
+        {
+            width: 78px;
+        }
+        .style2
+        {
+            width: 64px;
+        }
+        .style3
+        {
+            width: 68px;
+        }
+        .style4
+        {
+            width: 63px;
+        }
+        .style5
+        {
+            width: 91px;
+        }
+        .style6
+        {
+            width: 79px;
+        }
+        .style7
+        {
+            width: 54px;
+        }
+        .style8
+        {
+            width: 77px;
+        }
+        .style9
+        {
+            width: 21px;
+        }
+    </style>
+</asp:Content>
+
 

@@ -39,7 +39,7 @@
 				<td style="width: 139px"><%=c.NombreCompleto%></td>
 				<td style="width: 121px"><%=c.Curso%></td>
 				<td style="width: 121px"><%=c.Duracion%></td>
-                <td style="width: 121px"><a href="<%=tipo %>?nombre=<%=c.NombreCompleto %>&curso=<%=c.Curso %>&duracion=<%=c.Duracion %>"> Imprimir</a></td>
+                <td style="width: 121px"><a target="_blank" href="<%=tipo %>?nombre=<%=c.NombreCompleto %>&curso=<%=c.Curso %>&duracion=<%=c.Duracion %>"> Imprimir</a></td>
 			</tr>
 
             <% }
